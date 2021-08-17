@@ -31,8 +31,8 @@
     <div class="container">
         <div class="left_Side">
             <div class="profileText">
-                <div class="imgBx">
-                    <!-- <img class="photo" src="bilalkhan.png"> -->
+                <!-- <div class="imgBx">
+                   
                     <div class="avatar-upload">
                         <form method="post" action="{% url 'image_upload' resume.id %}" enctype="multipart/form-data">
                             {% csrf_token %}
@@ -50,9 +50,9 @@
                             </div>
                     </div>
                     </form>
-                </div>
+                </div> -->
                 <br>
-                <!-- <h2>Bilal khan <br><span>front end developer</span> </h2> -->
+              
                 <input type="text" class="data full_name" id="full_name" name="full_name" placeholder="Full name" value="{{resume.resumeuserdetails_set.get.full_name}}">
                 <input style="color: black;" type="text" class="data title" id="title" name="title" placeholder="title" value="{{resume.title}}">
             </div>
@@ -72,7 +72,7 @@
                     </li>
                     <li>
                         <div class="inputWithIcon inputIconBg">
-                            <input type="text" name="date_of_birth" id="date_of_birth" class="data date_of_birth" value="{{resume.resumeuserdetails_set.get.date_of_birth}}" placeholder="date    of birth">
+                            <input type="text" name="date_of_birth" id="date_of_birth" class="data date_of_birth" value="{{resume.resumeuserdetails_set.get.date_of_birth}}" placeholder="date of birth">
                             <i class="fa fa-birthday-cake" aria-hidden="true"></i>
                         </div>
                     </li>
