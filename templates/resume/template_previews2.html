@@ -780,7 +780,8 @@ grid-template-columns: 1fr 2fr;*/
                             <p><b>Description :- </b>{{ object.description }}</p>
                             {% endif %}
 
-                            {% if object.resposibilities == '' %} {% else}
+                            {% if object.responsibilities == '' %} 
+                            {% else %}
                             <p><b>Role and Responsibilities :-</b></p>
                             <ul>
                                 <li>{{ object.responsibilities }}</li>
