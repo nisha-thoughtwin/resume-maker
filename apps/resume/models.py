@@ -22,8 +22,8 @@ class Resume(models.Model):
     user = models.ForeignKey(
         User, on_delete=models.CASCADE, blank=True, null=True
     )  # change
-    title = models.CharField(max_length=50)
-    objective = models.TextField(max_length=200)
+    title = models.CharField(max_length=250)
+    objective = models.TextField(max_length=250)
     date = models.DateTimeField(auto_now=True)
 
     def __str__(self):
@@ -36,7 +36,7 @@ class Resume(models.Model):
 class ResumeUserDetails(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     resume = models.ForeignKey(Resume, on_delete=models.CASCADE)
-    full_name = models.CharField(max_length=30)
+    full_name = models.CharField(max_length=100)
     email = models.EmailField()
     mobile = models.CharField(max_length=100)
     date_of_birth = models.CharField(max_length=100)
