@@ -131,6 +131,9 @@
                                         <input type="text" class="data skills" id="skills" name="skills" placeholder="skills">
                                     </div>
                                 </div>
+                                <div class="btnset">
+                                    <button type="button" class="Delete  delete_skills_class" data-id="{{object.id}}"><i class="fa fa-trash" aria-hidden="true"></i> Delete</button>
+                                </div>
                             </div>
                             <div class="form-group another-skills" id="another-skills">
                             </div>
@@ -155,6 +158,9 @@
                 <div class="tab">
                     <div class="form-group" id="resume-hobbies" style="display: none;">
                         <input type="text" class=" data hobbies" id="hobbies" name="hobbies" placeholder="Hobbies">
+                        <div class="btnset">
+                            <button type="button" class="Delete  delete_hobbies_class" data-id="{{object.id}}"><i class="fa fa-trash" aria-hidden="true"></i> Delete</button>
+                        </div>
                     </div>
                     <div class="form-group another-hobbies" id="another-hobbies">
                     </div>
@@ -199,6 +205,9 @@
                                     <div class="text">
                                         <textarea placeholder="Designation..." rows="4" cols="50" name="designation" id="designation" class="data designation" required=""></textarea>
                                         <textarea placeholder="Role here..." rows="4" cols="50" class="data role" id="role" name="role" required=""></textarea>
+                                        <div class="btnset">
+                                            <button type="button" class="Delete  delete_experience_class" data-id="{{object.id}}"><i class="fa fa-trash" aria-hidden="true"></i> Delete</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -350,6 +359,7 @@
                 },
                 success: function(json) {}
             })
+            window.location.reload(true);
             
         })
 
@@ -390,6 +400,8 @@
                 },
                 success: function(json) {}
             })
+            window.location.reload(true);
+
         })
 
         $("#add-certificate").click(function() {
@@ -409,6 +421,8 @@
                 },
                 success: function(json) {}
             })
+            window.location.reload(true);
+
         })
 
         $("#add-skills").click(function() {
@@ -427,6 +441,8 @@
                 },
                 success: function(json) {}
             })
+            window.location.reload(true);
+            
         })
 
         $("#add-hobbies").click(function() {
@@ -446,6 +462,8 @@
                 },
                 success: function(json) {}
             })
+            window.location.reload(true);
+
         })
         
           
