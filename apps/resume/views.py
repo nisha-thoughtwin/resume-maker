@@ -61,7 +61,6 @@ class Dashboard(View):
         else:
             childs = get_childs(user, [])
             resumes = Resume.objects.filter(user__in=childs).order_by('date')
-            # resume = team_resume | user_resume
         return render(
             request,
             "resume/dashboard.html",
@@ -134,80 +133,45 @@ class CreateResumeView(View):
 
 # Delete template
 
-
 class DeleteExperience(View):
     def get(self, request, id):
-        experience = Experience.objects.get(id=id)
-        experience.delete()
-        resume_id = experience.resume.id
-        # print(hobbies.resume.id)
-        return redirect("/update_data/" + str(resume_id))
-
-
-class DeleteExperience(View):
-    def get(self, request, id):
-        experience = Experience.objects.get(id=id)
-        resume_id = experience.resume.id
-        experience.delete()
+        Experience.objects.get(id=id).delete()
         return JsonResponse({"status": True})
-        # print(hobbies.resume.id)
-        # return redirect("/update_data/"+str(resume_id))
 
 
 class DeleteEducation(View):
     def get(self, request, id):
-        education = Education.objects.get(id=id)
-        resume_id = education.resume.id
-        education.delete()
+        Education.objects.get(id=id).delete()
         return JsonResponse({"status": True})
-        # return redirect("/update_data/"+str(resume_id))
 
 
 class DeleteWorkSamples(View):
     def get(self, request, id):
-        deleteworksamples = WorkSamples.objects.get(id=id)
-        resume_id = deleteworksamples.resume.id
-        deleteworksamples.delete()
+        WorkSamples.objects.get(id=id).delete()
         return JsonResponse({"status": True})
-        # print(hobbies.resume.id)
-        # return redirect("/update_data/"+str(resume_id))
 
 
 class DeleteAchievements(View):
     def get(self, request, id):
-        deleteachievements = Achievements.objects.get(id=id)
-        resume_id = deleteachievements.resume.id
-        deleteachievements.delete()
+        Achievements.objects.get(id=id).delete()
         return JsonResponse({"status": True})
-        # print(hobbies.resume.id)
-        # return redirect("/update_data/"+str(resume_id))
 
 
 class DeleteCertificate(View):
     def get(self, request, id):
-        certificate = Certificate.objects.get(id=id)
-        resume_id = certificate.resume.id
-        certificate.delete()
+        Certificate.objects.get(id=id).delete()
         return JsonResponse({"status": True})
-        # print(hobbies.resume.id)
-        # return redirect("/update_data/"+str(resume_id))
 
 
 class DeleteSkills(View):
     def get(self, request, id):
-        skills = Skills.objects.get(id=id)
-        resume_id = skills.resume.id
-        skills.delete()
-        # print(skills.resume.id)
+        Skills.objects.get(id=id).delete()
         return JsonResponse({"status": True})
-        # return redirect("/update_data/"+str(resume_id))
 
 
 class DeleteHobbies(View):
     def get(self, request, id):
-        hobbies = Hobbies.objects.get(id=id)
-        resume_id = hobbies.resume.id
-        hobbies.delete()
+        Hobbies.objects.get(id=id).delete()
         return JsonResponse({"status": True})
 
 
