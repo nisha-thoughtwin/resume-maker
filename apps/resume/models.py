@@ -94,7 +94,8 @@ class WorkSamples(models.Model):
     description = models.TextField(max_length=1000)
     responsibilities = models.TextField(max_length=1000)
     logo = models.ImageField(upload_to="images/logos/")
-    date = models.DateTimeField(null=True, blank=True)
+
+    date = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return str(self.resume)

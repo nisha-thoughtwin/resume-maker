@@ -135,8 +135,6 @@
                     <input type="text" class="data skills" name="skills" placeholder="skills" value="{{ object.skills }}">
                 </div>
                 <div class="btnset">
-                    <!-- <a href="{% url 'deleteskill' object.id %}"><button type="button" class="Delete"><i
-                        class="fa fa-trash" aria-hidden="true"></i> Delete</button></a> -->
                     <button type="button" class="Delete  delete_skills_class" data-id="{{object.id}}"><i class="fa fa-trash" aria-hidden="true"></i> Delete</button>
                 </div>
                 {% endfor %}
@@ -151,8 +149,6 @@
                     <div class="btnset">
                         <button class="add" type="button" data-name="skills" id="add-skills"><i class="fa fa-plus-square" aria-hidden="true"></i> Add Skills !</button>
                     </div>
-                    <!-- <button type="button" data-name="skills" id="add-skills"><i class="fa fa-plus secondary"
-                        aria-hidden="true"></i>&nbsp; Add Skills !</button> -->
                 </div>
             </div>
             <div class="about interest">
@@ -164,8 +160,6 @@
                     </li>
                 </ul>
                 <div class="btnset">
-                    <!-- <a href="{% url 'deletehobbie' object.id %}"><button type="button" class="Delete"><i
-                        class="fa fa-trash" aria-hidden="true"></i> Delete</button></a> -->
                     <button type="button" class="Delete  delete_hobbies_class" data-id="{{object.id}}"><i class="fa fa-trash" aria-hidden="true"></i> Delete</button>
                 </div>
                 {% endfor %}
@@ -191,18 +185,13 @@
                 {% for object in experiences %}
                 <div class="box">
                     <div class="year_company">
-                        <!-- <h5>2020 - Present</h5> -->
-                        <!-- <h5>Company Name</h5> -->
                         <input type="text" class="data company_name" name="company_name" placeholder="Company Name" value="{{object.company_name}}">
                         <input type="text" class="data place" name="place" placeholder="Place" value="{{object.place}}">
                     </div>
                     <div class="text">
-                        <!-- <h4>Senior UX Developer</h4> -->
                         <textarea placeholder="Designation..." rows="4" cols="50" name="designation" id="designation" class="data designation" required="">{{object.designation}}</textarea>
                         <textarea class="data role" placeholder="Role here..." rows="4" cols="50" name="role" id="role" required="">{{object.role}}</textarea>
                         <div class="btnset">
-                            <!-- <a href="{% url 'deleteexperience' object.id %}"><button type="button" class="Delete"><i
-                                class="fa fa-trash" aria-hidden="true"></i> Delete</button></a> -->
                             <button type="button" class="Delete  delete_experience_class" data-id="{{object.id}}"><i class="fa fa-trash" aria-hidden="true"></i> Delete</button>
                         </div>
                     </div>
@@ -216,7 +205,6 @@
                                 <input type="text" class="data place" name="place" placeholder="Place">
                             </div>
                             <div class="text">
-                                <!-- <h4>Senior UX Developer</h4> -->
                                 <textarea placeholder="Designation..." rows="4" cols="50" name="designation" id="designation" class="data designation" required=""></textarea>
                                 <textarea class="data role" placeholder="Role here..." rows="4" cols="50" name="role" id="role" required=""></textarea>
                             </div>
@@ -227,7 +215,7 @@
                     <div class="btnset">
                         <button class="add" type="button" data-name="experience" id="add-experience"><i
                             class="fa fa-plus-square" aria-hidden="true"></i> Add Experience !</button>
-                        <!-- <button type="button" class="add" data-name="achievements" id="add-achievements"><i class="fa fa-plus-square" aria-hidden="true" ></i>&nbsp; Add Achievements !</button> -->
+                        
                     </div>
                 </div>
             </div>
@@ -236,21 +224,16 @@
                 {% for object in worksamples %}
                 <div class="box">
                     <div class="year_company">
-                        <!-- <h5>2020 - Present</h5> -->
-                        <!-- <h5>Company Name</h5> -->
                         <input type="text" class="data project_name" name="project_name" value="{{object.project_name}}" placeholder="Project name...">
                     </div>
                     <div class="text">
-                        <!-- <h4>Senior UX Developer</h4> -->
                         <textarea placeholder="Project link..." rows="4" cols="50" class="data project_link" id="project_link" name="project_link" required="">{{object.project_link}}</textarea>
                         <textarea placeholder="Technology..." rows="4" cols="50" id="technology" name="technology" class="data technology" required="">{{object.technology}}</textarea>
                         <textarea placeholder="Description here..." rows="4" cols="50" class="data description" id="description" name="description" required="">{{object.description}}</textarea>
                         <textarea placeholder="Role and Responsibilities here..." rows="4" cols="50" class=" data responsibilities" id="responsibilities" name="responsibilities" required="">{{object.responsibilities}}</textarea>
                         <div class="btnset">
                             <button type="button" class="Delete  delete_worksamples_class" data-id="{{object.id}}"><i class="fa fa-trash" aria-hidden="true"></i> Delete</button>
-                            <!-- <a href="{% url 'deleteworksamples' object.id %}"><button class="Delete"><i
-                                class="fa fa-trash"></i> Delete</button></a> -->
-                            <!-- <button class="add"><i class="fa fa-plus-square" aria-hidden="true"></i> Add</button> -->
+                            
                         </div>
                     </div>
                 </div>
@@ -259,12 +242,9 @@
                     <div class="form-group" id="resume-worksamples" style="display: none;">
                         <div class="box">
                             <div class="year_company">
-                                <!-- <h5>2020 - Present</h5> -->
-                                <!-- <h5>Company Name</h5> -->
                                 <input type="text" class="data project_name" id="project_name" name="project_name" placeholder="Project name...">
                             </div>
                             <div class="text">
-                                <!-- <h4>Senior UX Developer</h4> -->
                                 <textarea placeholder="Project link..." rows="4" cols="50" class="data project_link" id="project_link" name="project_link" required=""></textarea>
                                 <textarea placeholder="Technology..." rows="4" cols="50" id="technology" name="technology" class="data technology" required=""></textarea>
                                 <textarea placeholder="Description here..." rows="4" cols="50" class="data description" id="description" name="description" required=""></textarea>
@@ -285,8 +265,6 @@
                 {% for object in achievements %}
                 <textarea placeholder="Achievements here..." rows="4" cols="50" class="data achievements" id="achievements" name="achievements" required="">{{object.achievements}}</textarea>
                 <div class="btnset">
-                    <!-- <a href="{% url 'deleteachievements' object.id %}"><button type="button" class="Delete"><i
-                        class="fa fa-trash" aria-hidden="true"></i> Delete</button></a> -->
                     <button type="button" class="Delete  delete_achievements_class" data-id="{{object.id}}"><i class="fa fa-trash" aria-hidden="true"></i> Delete</button>
                 </div>
                 {% endfor %}
@@ -299,7 +277,7 @@
                     <div class="btnset">
                         <button class="add" type="button" data-name="achievements" id="add-achievements"><i
                             class="fa fa-plus-square" aria-hidden="true"></i> Add Achievements !</button>
-                        <!-- <button type="button" class="add" data-name="achievements" id="add-achievements"><i class="fa fa-plus-square" aria-hidden="true" ></i>&nbsp; Add Achievements !</button> -->
+                       
                     </div>
                 </div>
             </div>

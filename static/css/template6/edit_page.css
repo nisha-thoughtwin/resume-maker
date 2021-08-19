@@ -296,7 +296,7 @@ input[type="text"] {
   color: #f89151;
   font-size: 18px;
   font-weight: 500;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   letter-spacing: 1px;
   margin-bottom: 5px;
 }
@@ -374,7 +374,7 @@ input[type="text"] {
   color: #f89151;
   font-size: 18px;
   font-weight: 500;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   letter-spacing: 1px;
   margin-bottom: 5px;
   margin-top: 10px;
