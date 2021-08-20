@@ -1,4 +1,5 @@
 <!doctype html>
+{% load split_data %}
 <html lang="en">
 
 <head>
@@ -56,13 +57,17 @@
                         Designation :- {{object.designation}}</div>
                     {% endif %} {% if object.place == '' %} {% else %}
                     <div class="" name="place" placeholder="Place...">Place :- {{ object.place }}</div>
-                    {% endif %} {% if object.role == '' %} {% else %}
+                    {% endif %}
+                    
+                    {% if object.role == '' %} {% else %}
+                    {% with object.role|split as split_data %}
                     <p class="font-weight-bold">Role :-</p>
                     <ul class="achie">
-                        <li>
-                            {{object.role}}
-                        </li>
+                        {% for data in split_data %}
+                        <li>{{ data }}</li>
+                        {% endfor %} 
                     </ul>
+                    {% endwith %}
                     <!-- <div class="" name="role" placeholder="Description here...">
               {{object.role}}</div> -->
 
@@ -89,13 +94,17 @@
                             {{ object.description }}
                         </li>
                     </ul>
-                    {% endif %} {% if object.responsibilities == '' %} {% else %}
+                    {% endif %}
+                     
+                    {% if object.responsibilities == '' %} {% else %}
+                    {% with object.responsibilities|split as split_data %}
                     <p class=" font-weight-bold">Role and Responsibilities :-</p>
-                    <ul class="achie">
-                        <li>
-                            {{ object.responsibilities }}
-                        </li>
-                    </ul>
+                    <ul>
+                        {% for data in split_data %}
+                            <li>{{ data }}</li>
+                        {% endfor %}
+                        </ul>
+                    {% endwith %}
                     {% endif %}
                     <!-- <div class="" name="responsibilities" value="{{object.responsibilities}}" placeholder="Description here..."rows="6">{{ object.responsibilities }}</div> -->
 

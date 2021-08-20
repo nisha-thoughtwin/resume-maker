@@ -5,7 +5,6 @@ from django.utils.translation import ugettext_lazy as _
 
 from apps.users.models import *
 
-
 class ChooseTemplate(models.Model):
     name = models.CharField(max_length=100, null=True, blank=True)
     theme = models.ImageField(upload_to="theme/", blank=True)
@@ -93,6 +92,8 @@ class WorkSamples(models.Model):
     technology = models.CharField(max_length=200)
     description = models.TextField(max_length=1000)
     responsibilities = models.TextField(max_length=1000)
+    
+    
     logo = models.ImageField(upload_to="images/logos/")
 
     date = models.DateTimeField(auto_now=True)

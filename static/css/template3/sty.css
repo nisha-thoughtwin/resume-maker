@@ -5,7 +5,9 @@
   box-sizing: border-box;
   font-family: "Poppins", SansSerif;
 }
-
+ul.role-area li {
+  color: #194458;
+}
 body {
   background-color: lightblue;
   display: flex;
@@ -13,88 +15,116 @@ body {
   align-items: center;
   min-height: 100vh;
 }
-::focut{
+::focut {
   outline: none !important;
   border: none;
 }
 
-:focus-visible{
+:focus-visible {
   outline: none;
 }
 hr.right_hr {
-    margin: 0;
-    padding: 0;
-    border: none;
-    max-width: 80px;
-    height: 2px;
-    margin-bottom: 13px;
-    background-color: #003147;
+  margin: 0;
+  padding: 0;
+  border: none;
+  max-width: 80px;
+  height: 2px;
+  margin-bottom: 13px;
+  background-color: #003147;
 }
 textarea {
-    width: 100%;
-    border: 2px solid #aaa;
-    border-radius: 4px;
-    margin: 5px 0;
-    outline: none;
-    padding: 6px;
-    box-sizing: border-box;
-    transition: 0.3s;
+  width: 100%;
+  border: 2px solid #aaa;
+  border-radius: 4px;
+  margin: 5px 0;
+  outline: none;
+  padding: 6px;
+  box-sizing: border-box;
+  transition: 0.3s;
 }
 
 .name_sec {
-    width: 100%;
-    height: 250px;
-        background-image: linear-gradient(to right top, #0c3147, #103951, #13415c, #174967, #1a5272, #1a5272, #1a5272, #1a5272, #174967, #13415c, #103951, #0c3147);
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  width: 100%;
+  height: 250px;
+  background-image: linear-gradient(
+    to right top,
+    #0c3147,
+    #103951,
+    #13415c,
+    #174967,
+    #1a5272,
+    #1a5272,
+    #1a5272,
+    #1a5272,
+    #174967,
+    #13415c,
+    #103951,
+    #0c3147
+  );
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .name_sec h1 {
-    font-size: 3.9rem;
-    font-family: initial;
+  font-size: 3.9rem;
+  font-family: initial;
 }
 .name_sec p {
-    font-size: 1.1rem;
-    color: #fff;
+  font-size: 1.1rem;
+  color: #fff;
 }
 .name_sec input {
-    width: 30% !important;
+  width: 30% !important;
 }
 
 .btnset {
-    float: right;
+  float: right;
 }
 button.Delete {
-    border: none;
-    background-color: #ff0000;
-    color: #fff;
-    font-size: 12px;
-    padding: 3px 5px;
+  border: none;
+  background-color: #ff0000;
+  color: #fff;
+  font-size: 12px;
+  padding: 3px 5px;
 }
 
-button.add{
-    border: none;
-    background-image: linear-gradient(to right top, #0c3147, #103951, #13415c, #174967, #1a5272, #1a5272, #1a5272, #1a5272, #174967, #13415c, #103951, #0c3147);
-    color: #fff;
-    font-size: 12px;
-    padding: 3px 5px;
+button.add {
+  border: none;
+  background-image: linear-gradient(
+    to right top,
+    #0c3147,
+    #103951,
+    #13415c,
+    #174967,
+    #1a5272,
+    #1a5272,
+    #1a5272,
+    #1a5272,
+    #174967,
+    #13415c,
+    #103951,
+    #0c3147
+  );
+  color: #fff;
+  font-size: 12px;
+  padding: 3px 5px;
 }
 .about.interest .inputWithIcon input[type="text"] {
-    padding-left: 6px;
+  padding-left: 6px;
 }
 
 select#cars {
-    width: 100%;
-    border: 2px solid #aaa;
-    background-color: #fff;
-    border-radius: 4px;
-    margin: 8px 0;
-    outline: none;
-    padding: 6px;
-    box-sizing: border-box;
-    transition: 0.3s;
+  width: 100%;
+  border: 2px solid #aaa;
+  background-color: #fff;
+  border-radius: 4px;
+  margin: 8px 0;
+  outline: none;
+  padding: 6px;
+  box-sizing: border-box;
+  transition: 0.3s;
 }
 .avatar-upload {
   position: relative;
@@ -116,7 +146,7 @@ select#cars {
   height: 34px;
   margin-bottom: 0;
   border-radius: 100%;
-  background: #FFFFFF;
+  background: #ffffff;
   border: 1px solid transparent;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
   cursor: pointer;
@@ -129,7 +159,7 @@ select#cars {
 }
 .avatar-upload .avatar-edit input + label:after {
   content: "\f040";
-  font-family: 'FontAwesome';
+  font-family: "FontAwesome";
   color: #757575;
   position: absolute;
   top: 10px;
@@ -143,7 +173,7 @@ select#cars {
   height: 192px;
   position: relative;
   border-radius: 100%;
-  border: 6px solid #F8F8F8;
+  border: 6px solid #f8f8f8;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
 }
 .avatar-upload .avatar-preview > div {
@@ -155,44 +185,58 @@ select#cars {
   background-position: center;
 }
 .inputWithIcon {
-    position: relative;
+  position: relative;
 }
 .inputWithIcon.inputIconBg i {
-    background-image: linear-gradient(to right top, #0c3147, #103951, #13415c, #174967, #1a5272, #1a5272, #1a5272, #1a5272, #174967, #13415c, #103951, #0c3147);
-    color: #fff;
-    width: 35px;
-    height: 35px;
-    text-align: center;
-    padding: 9px 4px;
-    border-radius: 50%;
-    margin-right: 10px;
+  background-image: linear-gradient(
+    to right top,
+    #0c3147,
+    #103951,
+    #13415c,
+    #174967,
+    #1a5272,
+    #1a5272,
+    #1a5272,
+    #1a5272,
+    #174967,
+    #13415c,
+    #103951,
+    #0c3147
+  );
+  color: #fff;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  padding: 9px 4px;
+  border-radius: 50%;
+  margin-right: 10px;
 }
 .contactInfo.education h3 {
-    padding-bottom: 11px;
+  padding-bottom: 11px;
 }
 
 .inputWithIcon i {
-    /*position: absolute;
+  /*position: absolute;
     left: 0;
     top: 8px;*/
-    padding: 9px 8px;
-    color: #aaa;
-    transition: 0.3s;
+  padding: 9px 8px;
+  color: #aaa;
+  transition: 0.3s;
 }
 .inputWithIcon input[type="text"] {
-    padding-left: 40px;
+  padding-left: 40px;
 }
 
 input[type="text"] {
-    width: 100%;
-     border: 2px solid #aaa;
-     background-color: transparent;
-    border-radius: 4px;
-    margin: 8px 0;
-    outline: none;
-    padding: 6px;
-    box-sizing: border-box;
-    transition: 0.3s;
+  width: 100%;
+  border: 2px solid #aaa;
+  background-color: transparent;
+  border-radius: 4px;
+  margin: 8px 0;
+  outline: none;
+  padding: 6px;
+  box-sizing: border-box;
+  transition: 0.3s;
 }
 .containers {
   position: relative;
@@ -202,7 +246,7 @@ input[type="text"] {
   background-color: #fff;
   margin: 50px;
   padding: 0 0 21px 0;
-/*  display: grid;
+  /*  display: grid;
   grid-template-columns: 1fr 2fr;*/
   box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
   border-bottom: 2px solid #1a5272;
@@ -257,7 +301,7 @@ input[type="text"] {
   /*width: 250px;*/
 }
 .contactInfo input {
-    border-radius: 50px;
+  border-radius: 50px;
 }
 
 .title {
@@ -266,8 +310,8 @@ input[type="text"] {
   font-weight: 600;
   letter-spacing: 1px;
   margin-bottom: 0px;
-    font-size: 21px;
-padding: 0 0 11px 0;
+  font-size: 21px;
+  padding: 0 0 11px 0;
 }
 .contactInfo ul {
   position: relative;
@@ -285,9 +329,9 @@ padding: 0 0 11px 0;
   color: #03a9f4;
 }
 .contactInfo ul li span {
-    color: #194458;
-    /* font-weight: 500; */
-    font-size: 14px;
+  color: #194458;
+  /* font-weight: 500; */
+  font-size: 14px;
 }
 .contactInfo.education h5 {
   color: #03a9f4;
@@ -295,7 +339,7 @@ padding: 0 0 11px 0;
 }
 
 .contactInfo.education {
-    padding-top: 20px;
+  padding-top: 20px;
 }
 .contactInfo.education h4:nth-child(2) {
   color: #fff;
@@ -321,7 +365,7 @@ padding: 0 0 11px 0;
   background-color: #03a9f4;
 }
 .contactInfo.language {
-    padding-top: 20px;
+  padding-top: 20px;
 }
 .containers .right_Side {
   position: relative;
@@ -332,13 +376,13 @@ padding: 0 0 11px 0;
   margin-bottom: 20px;
 }
 .about.skills {
-    padding-top: 20px;
+  padding-top: 20px;
 }
 .about.interest ul li {
-    margin: 0;
+  margin: 0;
 }
 .about.interest {
-    padding-top: 20px;
+  padding-top: 20px;
 }
 .about:last-child {
   margin-bottom: 0;
@@ -378,7 +422,7 @@ p {
 .skills .box {
   position: relative;
   width: 100%;
-/*  display: grid;
+  /*  display: grid;
   grid-template-columns: 150px 1fr;
   justify-content: center;
   align-items: center;*/
@@ -393,7 +437,7 @@ p {
     gap: 1rem;
 }*/
 .about.skills .box {
-    margin: 3px auto;
+  margin: 3px auto;
 }
 .skills .box .percent {
   position: relative;
@@ -414,9 +458,9 @@ p {
   gap: 1rem;
 }*/
 .about.interest .inputWithIcon.inputIconBg i {
-    width: 35px;
-    background-color: #0c3147;
-    color: #fff;
+  width: 35px;
+  background-color: #0c3147;
+  color: #fff;
 }
 .interest ul li {
   list-style: none;

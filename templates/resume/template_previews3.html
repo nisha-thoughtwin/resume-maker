@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+{% load split_data %}
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -154,9 +154,19 @@
                             <div class="text">
                                 {% if object.designation == '' %} {% else %}
                                 <p><b>Designation :-</b>{{ object.designation }}</p>
-                                {% endif %} {% if object.role == '' %} {% else %}
-                                <p><b>Role:-</b>{{ object.role }}</p>
                                 {% endif %}
+                                
+                                {% if object.role == '' %} {% else %}
+                                {% with object.role|split as split_data %}
+                                <p><b>Role:-</b></p>
+                                    <ul class="role-area">
+                                        {% for data in split_data %}
+                                        <li>{{ data }}</li>
+                                        {% endfor %} 
+                                    </ul>
+                                    {% endwith %}
+                                {% endif %}
+
                             </div>
                         </div>
                         {% endfor %}
@@ -169,11 +179,23 @@
                                 <p><b>Project Name:-</b>{{ object.project_name }}</p>
                                 {% endif %} {% if object.project_link == '' %} {% else %}
                                 <p><b>Project Link:-</b>{{ object.project_link }}</p>
-                                {% endif %} {% if object.technology == '' %} {% else %}
+                                {% endif %} 
+                                {% if object.technology == '' %} {% else %}
                                 <p><b>Technology:-</b>{{ object.technology }}</p>
-                                {% endif %} {% if object.responsibilities == '' %} {% else %}
-                                <p><b>Responsibilities:-</b>{{object.responsibilities }}</p>
-                                {% endif %} {% if object.description == '' %} {% else %}
+                                {% endif %}
+                                
+                                {% if object.responsibilities == '' %} {% else %}
+                                {% with object.responsibilities|split as split_data %}
+                                <p><b>Responsibilities:-</b></p>
+                                    <ul class="role-area" >
+                                        {% for data in split_data %}
+                                            <li>{{ data }}</li>
+                                        {% endfor %}
+                                        </ul>
+                                {% endwith %}
+                                {% endif %}
+                                
+                                {% if object.description == '' %} {% else %}
                                 <p><b>Description:-</b>{{ object.description }}</p>
                                 {% endif %}
                             </div>

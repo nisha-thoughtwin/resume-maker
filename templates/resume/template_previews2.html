@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+{% load split_data %}
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -742,7 +742,14 @@ grid-template-columns: 1fr 2fr;*/
                             {% endif %}
 
                             {% if object.role == '' %} {% else %}
-                            <p><b>Role :- </b>{{object.role}}</p>
+                            {% with object.role|split as split_data %}
+                            <p><b>Role :- </b></p>
+                            <ul class="role-area">
+                                {% for data in split_data %}
+                                <li>{{ data }}</li>
+                                {% endfor %} 
+                            </ul>
+                            {% endwith %}
                             {% endif %}
 
 
@@ -782,10 +789,14 @@ grid-template-columns: 1fr 2fr;*/
 
                             {% if object.responsibilities == '' %} 
                             {% else %}
+                            {% with object.responsibilities|split as split_data %}
                             <p><b>Role and Responsibilities :-</b></p>
-                            <ul>
-                                <li>{{ object.responsibilities }}</li>
-                            </ul>
+                            <ul >
+                                {% for data in split_data %}
+                                    <li>{{ data }}</li>
+                                {% endfor %}
+                                </ul>
+                        {% endwith %}
                             {% endif %}
 
 

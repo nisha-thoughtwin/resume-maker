@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+{% load split_data %}
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -707,14 +707,14 @@ grid-template-columns: 1fr 2fr;*/
                     <div class="row">
                         {% for object in resume.skills_set.all %}
                         <div class="col-md-3">
-
-
+                            
+                            
                             <div class="box">
                                 {% if object.skills == '' %} {% else %}
                                 <p>{{object.skills}}</p>
                                 {% endif %}
                             </div>
-
+                            
                         </div>
                         {% endfor %}
 
@@ -792,12 +792,22 @@ grid-template-columns: 1fr 2fr;*/
 
                         <div class="col-md-8">
                             <div class="text">
-
-                                {% if object.role == '' %} {% else %}
-                                <p><b>Role:- </b>{{ object.role }}</p>
-                                {% endif %} {% if object.designation == '' %} {% else %}
+                                {% if object.designation == '' %} {% else %}
                                 <p><b>Designation:- </b>{{ object.designation }}</p>
                                 {% endif %}
+
+                                {% if object.role == '' %} {% else %}
+                                {% with object.role|split as split_data %}
+
+                                <p><b>Role:-</p> </b>
+                                <ul class="ul_set">
+                                    {% for data in split_data %}
+                                    <li>{{ data }}</li>
+                                    {% endfor %} 
+                                </ul>
+                                {% endwith %}
+                                {% endif %} 
+                                
 
                             </div>
                         </div>
@@ -853,8 +863,19 @@ grid-template-columns: 1fr 2fr;*/
                             <p><b>Technology:- </b>{{ object.technology }}</p>
                             {% endif %} {% if object.description == '' %} {% else %}
                             <p><b>Description:- </b>{{ object.description }}</p>
-                            {% endif %} {% if object.responsibilities == '' %} {% else %}
-                            <p><b>Responsibilities:- </b>{{object.responsibilities }}</p>
+                            {% endif %} 
+
+                            {% if object.responsibilities == '' %} {% else %}
+                            {% with object.responsibilities|split as split_data %}
+                            <p><b>Responsibilities:-</p> </b>
+                            {% for data in split_data %}
+                            <ul><li>
+                            {{ data }}
+                            </li></ul>
+                            
+                            {% endfor %}
+                            {% endwith %}
+
                             {% endif %}
                         </div>
                     </div>
@@ -866,7 +887,7 @@ grid-template-columns: 1fr 2fr;*/
 
                 <div class="about">
                     {% if resume.achievements_set.all %} {% for object in resume.achievements_set.all %} {% if forloop.first and object.achievements != ''%}
-                    <h2 class="title2">Achievements</h2>
+                    <h2 class="title2">Achievement</h2>
                     {% endif %} {% if object.achievements == '' %} {% else %}
                     <p>{{object.achievements}}</p>
                     {% endif %} {% endfor %} {% else %} {% endif %}

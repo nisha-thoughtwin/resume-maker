@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'apps.resume.apps.ResumeConfig',
     'apps.users',
     
+    
 
 ]
 DATE_INPUT_FORMATS = ['%d/%m/%Y', ]
@@ -73,6 +74,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
+        
         },
     },
 ]
@@ -195,3 +197,5 @@ DJOSER = {
 }
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+

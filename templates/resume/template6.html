@@ -156,7 +156,7 @@
                             {% for object in educations %}
                             <ul>
                                 <li>
-                                    <input type="text" class="data qualification_name"  name="qualification_name" value="{{ object.qualification_name }}" placeholder="Qualication name...">
+                                    <input type="text" class="data qualification_name"  name="qualification_name" value="{{ object.qualification_name }}" placeholder="Qualification name...">
                                 </li>
                                 <li>
                                     <input type="text" placeholder="University name..." class="data university" name="university" placeholder="University name..." value="{{object.university}}">
@@ -199,11 +199,11 @@
                             </div>
                         </div>
                         <div class="contactInfo education">
-                            <h2 class="title">PROFESSIONALS SKILLS</h2>
+                            <h2 class="title">PROFESSIONAL SKILLS</h2>
                             {% for object in skills %}
                             <ul>
                                 <li>
-                                    <input type="text" class="data skills" name="skills" placeholder="skills" value="{{ object.skills }}">
+                                    <input type="text" class="data skills" name="skills" placeholder="Skills" value="{{ object.skills }}">
                                 </li>
                             </ul>
                             <div class="btnset">
@@ -249,7 +249,7 @@
                                 <div class="form-group another-hobbies" id="another-hobbies"></div>
                                 <div class="btnset">
                                     <button class="add" type="button" data-name="hobbies" id="add-hobbies"><i
-                              class="fa fa-plus-square" aria-hidden="true"></i> Add hobbies !</button>
+                              class="fa fa-plus-square" aria-hidden="true"></i> Add Hobbies !</button>
                                 </div>
                             </div>
                         </div>
@@ -288,7 +288,7 @@
                         <div class="about CERTIFICATE">
                             <h2 class="title2">CERTIFICATE</h2>
                             {% for object in certificates %}
-                            <textarea placeholder="Certicate here..." rows="4" cols="50" id="certificate" name="certificate" class="data certificate" required="">{{ object.certificate }}</textarea>
+                            <textarea placeholder="Certificates here..." rows="4" cols="50" id="certificate" name="certificate" class="data certificate" required="">{{ object.certificate }}</textarea>
                             <div class="btnset">
                                 <button type="button" class="Delete  delete_certificate_class" data-id="{{object.id}}"><i class="fa fa-trash" aria-hidden="true"></i> Delete</button>
                             </div>

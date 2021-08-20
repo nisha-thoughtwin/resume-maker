@@ -193,6 +193,7 @@ class UpdateDataView(View):
         """
         resume = Resume.objects.get(id=id)
         if request.method == "POST":
+            # import pdb; pdb.set_trace()
             objective = request.POST.get("objective", "")
             title = request.POST.get("title", "")
             resume.objective = objective

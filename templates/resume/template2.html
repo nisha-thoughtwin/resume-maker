@@ -14,6 +14,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    
+
+    <!-- Summernote -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote-bs4.css" rel="stylesheet">
+    
 </head>
 <style type="text/css">
     .preview-btn {
@@ -190,7 +196,8 @@
                     </div>
                     <div class="text">
                         <textarea placeholder="Designation..." rows="4" cols="50" name="designation" id="designation" class="data designation" required="">{{object.designation}}</textarea>
-                        <textarea class="data role" placeholder="Role here..." rows="4" cols="50" name="role" id="role" required="">{{object.role}}</textarea>
+                        <textarea class="data role"   placeholder="Role here..." rows="4" cols="50" name="role"  required="">{{object.role}}</textarea>
+                       
                         <div class="btnset">
                             <button type="button" class="Delete  delete_experience_class" data-id="{{object.id}}"><i class="fa fa-trash" aria-hidden="true"></i> Delete</button>
                         </div>
@@ -230,7 +237,7 @@
                         <textarea placeholder="Project link..." rows="4" cols="50" class="data project_link" id="project_link" name="project_link" required="">{{object.project_link}}</textarea>
                         <textarea placeholder="Technology..." rows="4" cols="50" id="technology" name="technology" class="data technology" required="">{{object.technology}}</textarea>
                         <textarea placeholder="Description here..." rows="4" cols="50" class="data description" id="description" name="description" required="">{{object.description}}</textarea>
-                        <textarea placeholder="Role and Responsibilities here..." rows="4" cols="50" class=" data responsibilities" id="responsibilities" name="responsibilities" required="">{{object.responsibilities}}</textarea>
+                        <textarea placeholder="Role and Responsibilities here..." rows="4" cols="50" class="data responsibilities summernote" id="responsibilities" name="responsibilities" required="">{{ object.responsibilities|safe }}</textarea>
                         <div class="btnset">
                             <button type="button" class="Delete  delete_worksamples_class" data-id="{{object.id}}"><i class="fa fa-trash" aria-hidden="true"></i> Delete</button>
                             
@@ -312,6 +319,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="{% static '/js/delete.js' %}"></script>
+    
+    
     <script>
         function delay(callback, ms) {
             var timer = 0;
@@ -482,6 +491,7 @@
             var place = $('input[name^=place]').map(function(idx, elem) {
                 return $(elem).val();
             }).get();
+            debugger
             var role = $('textarea[name^=role]').map(function(idx, elem) {
                 return $(elem).val();
             }).get();
@@ -690,6 +700,9 @@
             })
         });
     </script>
+
+    
+    
 </body>
 
 </html>
