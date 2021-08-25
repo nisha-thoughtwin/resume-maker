@@ -119,7 +119,11 @@ class CreateResumeView(View):
         resume = Resume.objects.create()
         template = ChooseTemplate.objects.get(id=id)
         resume.template = template
-        resume.save()
+        if request.user.is_authenticated:
+            resume.user=request.user
+            resume.save()
+        else:
+            resume.save()
         experience = Experience.objects.create(resume=resume)
         work_samples = WorkSamples.objects.create(resume=resume)
         achievement = Achievements.objects.create(resume=resume)
