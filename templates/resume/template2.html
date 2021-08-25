@@ -135,7 +135,7 @@
                 </div>
             </div>
             <div class="about skills">
-                <h3 class="title3">Professionals skills</h3>
+                <h3 class="title3">Professional skills</h3>
                 {% for object in skills %}
                 <div class="box1">
                     <input type="text" class="data skills" name="skills" placeholder="skills" value="{{ object.skills }}">
@@ -176,7 +176,7 @@
                     <div class="form-group another-hobbies" id="another-hobbies">
                     </div>
                     <div class="btnset">
-                        <button class="add" type="button" data-name="hobbies" id="add-hobbies"><i class="fa fa-plus-square" aria-hidden="true"></i> Add hobbies !</button>
+                        <button class="add" type="button" data-name="hobbies" id="add-hobbies"><i class="fa fa-plus-square" aria-hidden="true"></i> Add Interest !</button>
                     </div>
                 </div>
             </div>
@@ -334,7 +334,7 @@
             };
         }
 
-        $("#add-education").click(delay(function() {
+        $("#add-education").click(function() {
             var education_form = $('#resume-education').html();
 
             $("#another-education").append(education_form);
@@ -352,7 +352,7 @@
             })
             window.location.reload(true);
 
-        }, 10))
+        })
 
         $("#add-experience").click(function() {
 

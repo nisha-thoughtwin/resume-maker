@@ -439,7 +439,7 @@
                 };
             }
 
-            $("#add-education").click(delay(function () {
+            $("#add-education").click(function () {
                 var education_form = $('#resume-education').html();
 
                 $("#another-education").append(education_form);
@@ -457,7 +457,7 @@
                 })
             window.location.reload(true);
 
-            }, 10))
+            })
 
             $("#add-experience").click(function () {
 
