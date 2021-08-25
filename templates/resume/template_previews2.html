@@ -32,7 +32,7 @@
         }
 
         body {
-            #background-color: lightblue;
+            background-color: lightblue;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -351,8 +351,11 @@ grid-template-columns: 1fr 2fr;*/
         .container .right_Side {
             position: relative;
             background-color: #fff;
-            padding: 20px;
+            padding-top: 20px;
         }
+        p {
+    margin-bottom: 5px;
+}
 
         .about {
             margin-bottom: 40px;
@@ -603,7 +606,7 @@ grid-template-columns: 1fr 2fr;*/
 
                 <div class="contactInfo">
                     <h2 style="color:white;" class="title2">PERSONAL DETAILS</h2>
-                    <ul style="padding-top:10px">
+                    <ul>
                         {% for object in resume.resumeuserdetails_set.all %}
                         <li>
                             <div class="inputWithIcon inputIconBg">
@@ -638,7 +641,7 @@ grid-template-columns: 1fr 2fr;*/
                 <div class="contactInfo education">
                     <h2 style="color:white;" class="title2">EDUCATION</h2>
                     {% for object in resume.education_set.all %}
-                    <!-- <ul style="padding-top:10px"> -->
+                   
 
                     {% if object.qualification_name == '' %}
                     {% else %}
@@ -712,7 +715,7 @@ grid-template-columns: 1fr 2fr;*/
                 <div class="about">
                     <h2 class="title2">CAREER OBJECTIVE</h2>
 
-                    <p>{{resume.objective}}</p>
+                    <p>{{resume.objective|linebreaksbr}}</p>
                 </div>
 
                 <!-- exprince section -->

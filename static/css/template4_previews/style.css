@@ -18,33 +18,33 @@ body {
   right: 15px;
   top: 17%;
 } */
-::focut{
+::focut {
   outline: none !important;
   border: none;
 }
 
-:focus-visible{
+:focus-visible {
   outline: none;
 }
 hr.right_hr {
-    margin: 0;
-    padding: 0;
-    border: none;
-    max-width: 80px;
-    height: 2px;
-    margin-bottom: 13px;
-    background-color: #003147;
+  margin: 0;
+  padding: 0;
+  border: none;
+  max-width: 80px;
+  height: 2px;
+  margin-bottom: 13px;
+  background-color: #003147;
 }
 
 textarea {
-    width: 100%;
-    border: 1px solid #21817f;
-    border-radius: 4px;
-    margin: 5px 0;
-    outline: none;
-    padding: 6px;
-    box-sizing: border-box;
-    transition: 0.3s;
+  width: 100%;
+  border: 1px solid #21817f;
+  border-radius: 4px;
+  margin: 5px 0;
+  outline: none;
+  padding: 6px;
+  box-sizing: border-box;
+  transition: 0.3s;
 }
 
 .name_sec {
@@ -63,26 +63,26 @@ textarea {
   text-shadow: 1px 3px 5px #ccc;
 }
 .name_sec input {
-    width: 30% !important;
+  width: 30% !important;
 }
 
 .btnset {
-    float: right;
+  float: right;
 }
 button.Delete {
-    border: none;
-    background-color: #ff0000;
-    color: #fff;
-    font-size: 12px;
-    padding: 3px 5px;
+  border: none;
+  background-color: #ff0000;
+  color: #fff;
+  font-size: 12px;
+  padding: 3px 5px;
 }
 
-button.add{
-    border: none;
-    background-color: #21817f;
-    color: #fff;
-    font-size: 12px;
-    padding: 3px 5px;
+button.add {
+  border: none;
+  background-color: #21817f;
+  color: #fff;
+  font-size: 12px;
+  padding: 3px 5px;
 }
 
 .con_info {
@@ -92,7 +92,7 @@ button.add{
   padding: 5px 30px;
 }
 
-.con_info input[type="text"]{
+.con_info input[type="text"] {
   border: 1px solid #fff;
 }
 
@@ -111,19 +111,19 @@ h2.title2::before {
   margin-right: 10px;
 }
 .about.interest .inputWithIcon input[type="text"] {
-    padding-left: 6px;
+  padding-left: 6px;
 }
 
 select#cars {
-    width: 100%;
-    border: 2px solid #aaa;
-    background-color: #fff;
-    border-radius: 4px;
-    margin: 8px 0;
-    outline: none;
-    padding: 6px;
-    box-sizing: border-box;
-    transition: 0.3s;
+  width: 100%;
+  border: 2px solid #aaa;
+  background-color: #fff;
+  border-radius: 4px;
+  margin: 8px 0;
+  outline: none;
+  padding: 6px;
+  box-sizing: border-box;
+  transition: 0.3s;
 }
 .avatar-upload {
   position: relative;
@@ -145,7 +145,7 @@ select#cars {
   height: 34px;
   margin-bottom: 0;
   border-radius: 100%;
-  background: #FFFFFF;
+  background: #ffffff;
   border: 1px solid transparent;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
   cursor: pointer;
@@ -158,7 +158,7 @@ select#cars {
 }
 .avatar-upload .avatar-edit input + label:after {
   content: "\f040";
-  font-family: 'FontAwesome';
+  font-family: "FontAwesome";
   color: #757575;
   position: absolute;
   top: 10px;
@@ -172,7 +172,7 @@ select#cars {
   height: 192px;
   position: relative;
   border-radius: 100%;
-  border: 6px solid #F8F8F8;
+  border: 6px solid #f8f8f8;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
 }
 .avatar-upload .avatar-preview > div {
@@ -184,20 +184,20 @@ select#cars {
   background-position: center;
 }
 .inputWithIcon {
-    position: relative;
+  position: relative;
 }
 .name_sec input {
   color: #21817f;
 }
-textarea{
+textarea {
   color: #21817f;
 }
 .pad_sec input {
   color: #21817f;
 }
 
-.pad_sec{
-  padding: 3%;
+.pad_sec {
+  padding: 5% 5% 0 5%;
 }
 .rig_set {
   background-color: #f1f1f1;
@@ -213,27 +213,27 @@ textarea{
   border-radius: 50%;
 }
 .inputWithIcon i {
-    /* position: absolute;
+  /* position: absolute;
     left: 0;
     top: 8px; */
-    padding: 9px 8px;
-    color: #aaa;
-    transition: 0.3s;
+  padding: 9px 8px;
+  color: #aaa;
+  transition: 0.3s;
 }
 .inputWithIcon input[type="text"] {
-    padding-left: 28px;
+  padding-left: 28px;
 }
 
 input[type="text"] {
-    width: 100%;
-    border: 1px solid #21817f;
-    background-color: transparent;
-    border-radius: 4px;
-    margin: 8px 0;
-    outline: none;
-    padding: 6px;
-    box-sizing: border-box;
-    transition: 0.3s;
+  width: 100%;
+  border: 1px solid #21817f;
+  background-color: transparent;
+  border-radius: 4px;
+  margin: 8px 0;
+  outline: none;
+  padding: 6px;
+  box-sizing: border-box;
+  transition: 0.3s;
 }
 .wor_sem {
   padding-top: 40px;
@@ -246,7 +246,7 @@ input[type="text"] {
   background-color: #fff;
   margin: 50px;
   /* padding: 0 0 21px 0; */
-/*  display: grid;
+  /*  display: grid;
   grid-template-columns: 1fr 2fr;*/
   box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
   border-bottom: 2px solid #21817f;
@@ -361,7 +361,7 @@ input[type="text"] {
   background-color: #03a9f4;
 }
 .contactInfo.language {
-    padding-top: 40px;
+  padding-top: 40px;
 }
 .containers .right_Side {
   position: relative;
@@ -377,10 +377,10 @@ input[type="text"] {
   border-bottom: 2px solid #ececec;
 }
 .about.skills {
-    padding-top: 40px;
+  padding-top: 40px;
 }
 .about.interest ul li {
-    margin: 0;
+  margin: 0;
 }
 /* .about:last-child {
   margin-bottom: 0;
@@ -418,7 +418,7 @@ p {
 .skills .box {
   position: relative;
   width: 100%;
-/*  display: grid;
+  /*  display: grid;
   grid-template-columns: 150px 1fr;
   justify-content: center;
   align-items: center;*/
@@ -439,7 +439,7 @@ p {
     gap: 1rem;
 }*/
 .about.skills .box {
-    margin: 3px auto;
+  margin: 3px auto;
 }
 .skills .box .percent {
   position: relative;
@@ -460,9 +460,9 @@ p {
   gap: 1rem;
 }*/
 .about.interest .inputWithIcon.inputIconBg i {
-    width: 35px;
-    background-color: #0c3147;
-    color: #fff;
+  width: 35px;
+  background-color: #0c3147;
+  color: #fff;
 }
 .interest ul li {
   list-style: none;
@@ -526,11 +526,10 @@ p {
   width: 70%;
 }
 
-@media screen and (min-device-width: 50px) and (max-device-width: 767px) { 
-  .name_sec input {     width: 97% !important; }
+@media screen and (min-device-width: 50px) and (max-device-width: 767px) {
+  .name_sec input {
+    width: 97% !important;
+  }
 
   /* .col-md-6.text-center{text-align: left;} */
 }
-
-
-

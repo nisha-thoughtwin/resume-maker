@@ -656,10 +656,7 @@ grid-template-columns: 1fr 2fr;*/
         <div class="name_sec">
             <h1>{{resume.resumeuserdetails_set.all.first.full_name}}</h1>
             <p><b>{{resume.title}}</b></p>
-            <!-- <p>{{resume.objective}}</p> -->
-            <!-- <input type="text" name="" placeholder="Name">
-            <input type="text" name="" placeholder="Title">
-            <input type="text" name="" placeholder="Des"> -->
+           
         </div>
         <table>
 
@@ -768,7 +765,7 @@ grid-template-columns: 1fr 2fr;*/
                     <h2 class="title2">CAREER OBJECTIVE</h2>
                     <div class="row">
                         <div class="col-md-12">
-                            <p>{{resume.objective}}</p>
+                            <p>{{resume.objective|linebreaksbr}}</p>
                         </div>
                     </div>
                 </div>

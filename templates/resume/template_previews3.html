@@ -7,13 +7,14 @@
     <title>Responsive CV</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" type="text/css" href="style.css">
+    
     <link rel="stylesheet" type="text/css" href="/static/css/template3/sty.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
+
 <style type="text/css">
     
     
@@ -136,7 +137,7 @@
                 <div class="right_Side">
                     <div class="about">
                         <h2 class="title2">CAREER OBJECTIVE</h2>
-                        <p>{{resume.objective}}</p>
+                        <p>{{resume.objective|linebreaksbr}}</p>
                     </div>
 
                     <div class="about">
@@ -236,7 +237,7 @@
     </div>
 </body>
 <script>
-    $(".download").click(function() {
+    $(".download").click(function () {
         $(".wrapper").css("margin-top", "-25px");
         $(".wrapper").css("margin-bottom", "0px");
         window.print()

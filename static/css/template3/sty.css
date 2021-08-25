@@ -270,6 +270,7 @@ input[type="text"] {
   /*border-radius: 50%;*/
   overflow: hidden;
 }
+
 .profileText .imgBx img {
   position: absolute;
   top: 0;
@@ -303,7 +304,6 @@ input[type="text"] {
 .contactInfo input {
   border-radius: 50px;
 }
-
 .title {
   color: #0c3147;
   text-transform: uppercase;
@@ -372,6 +372,7 @@ input[type="text"] {
   background-color: #fff;
   padding: 0 20px;
 }
+
 .about {
   margin-bottom: 20px;
 }
@@ -387,6 +388,7 @@ input[type="text"] {
 .about:last-child {
   margin-bottom: 0;
 }
+
 .title2 {
   color: #003147;
   font-size: 20px;
@@ -400,7 +402,7 @@ p {
   color: #194458;
   margin-bottom: 15px;
 }
-.about .box {
+/* .about .box {
   display: flex;
   gap: 1rem;
   flex-direction: row;
@@ -418,7 +420,8 @@ p {
   text-transform: uppercase;
   color: #2a7da2;
   font-size: 16px;
-}
+} */
+
 .skills .box {
   position: relative;
   width: 100%;
@@ -432,10 +435,7 @@ p {
   color: #848c90;
   font-weight: 500;
 }
-/*.box1 {
-    display: flex;
-    gap: 1rem;
-}*/
+
 .about.skills .box {
   margin: 3px auto;
 }
@@ -452,11 +452,7 @@ p {
   height: 100%;
   background-color: #03a9f4;
 }
-/*.interest ul {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-}*/
+
 .about.interest .inputWithIcon.inputIconBg i {
   width: 35px;
   background-color: #0c3147;
