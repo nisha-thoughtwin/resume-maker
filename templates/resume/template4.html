@@ -177,7 +177,7 @@
                             <div class="about CERTIFICATE">
                                 <h2 class="title2">CERTIFICATE</h2>
                                 {% for object in certificates %}
-                                <textarea placeholder="Certicate here..." rows="4" cols="50" class="data certificate" id="certificate" name="certificate" required="">{{object.certificate}}</textarea>
+                                <textarea placeholder="Certificate here..." rows="4" cols="50" class="data certificate" id="certificate" name="certificate" required="">{{object.certificate}}</textarea>
                                 <div class="btnset">
                                     <button type="button" class="Delete  delete_certificate_class" data-id="{{object.id}}"><i class="fa fa-trash" aria-hidden="true"></i> Delete</button>
                                 </div>
@@ -239,7 +239,7 @@
                                 <!-- <ul> -->
                                 {% for object in educations %}
                                 <!-- <li> -->
-                                <input type="text" placeholder="Qualifation name..." class="data qualification_name" name="qualification_name" value="{{object.qualification_name}}">
+                                <input type="text" placeholder="Qualification name..." class="data qualification_name" name="qualification_name" value="{{object.qualification_name}}">
                                 <!-- </li>
                            <li> -->
                                 <input type="text" placeholder="University name..." class="data university" name="university" value="{{object.university}}">
