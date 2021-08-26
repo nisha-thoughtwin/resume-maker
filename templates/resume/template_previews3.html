@@ -208,7 +208,7 @@
                         {% if resume.achievements_set.all %} {% for object in resume.achievements_set.all %} {% if forloop.first and object.achievements != ''%}
                         <h2 class="title2">ACHIEVEMENTS</h2>
                         {% endif %} {% if object.achievements == '' %} {% else %}
-                        <p>{{object.achievements}}</p>
+                        <p>{{object.achievements|linebreaksbr}}</p>
                         {% endif %} {% endfor %} {% else %} {% endif %}
                     </div>
 
@@ -217,7 +217,7 @@
 
                         <h2 class="title2">CERTIFICATE</h2>
                         {% endif %} {% if object.certificate == '' %} {% else %}
-                        <p>{{object.certificate}}</p>
+                        <p>{{object.certificate|linebreaksbr}}</p>
                         {% endif %} {% endfor %} {% else %} {% endif %}
 
 

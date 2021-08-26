@@ -179,7 +179,7 @@
                                 <h2 class="title2">Achievements</h2>
                                 {% endif %}
                                 {% if object.achievements == '' %} {% else %}
-                                <p>{{object.achievements}}</p>
+                                <p>{{object.achievements|linebreaksbr}}</p>
                                 <hr> 
                                 {% endif %}
                                 {% endfor %} 
@@ -199,7 +199,7 @@
                                  {% if object.certificate == '' %} 
                                  {% else %}
 
-                                <p>{{object.certificate}}</p>
+                                <p>{{object.certificate|linebreaksbr}}</p>
                                 <hr>
                                  {% endif %}
                                   {% endfor %} 

@@ -121,7 +121,7 @@
                         <ul class="achie">
                             {% if object.achievements == '' %} {% else %}
                             <li>
-                                {{object.achievements}}
+                                {{object.achievements|linebreaksbr}}
                             </li>
                             {% endif %}
 
@@ -134,7 +134,7 @@
                         {% endif %}
                         <ul class="achie">
                             {% if object.certificate == '' %} {% else %}
-                            <li>{{object.certificate}}</li>
+                            <li>{{object.certificate|linebreaksbr}}</li>
                             {% endif %}
                         </ul>
                         {% endfor %} {% else %} {% endif %}

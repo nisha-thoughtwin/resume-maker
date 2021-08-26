@@ -826,7 +826,7 @@ grid-template-columns: 1fr 2fr;*/
                     {% if object.achievements == '' %} {% else %}
 
                     <ul class="ul_set">
-                        <li>{{object.achievements}}</li>
+                        <li>{{object.achievements|linebreaksbr}}</li>
                     </ul>
                     {% endif %} {% endfor %} {% else %} {% endif %}
 
@@ -840,7 +840,7 @@ grid-template-columns: 1fr 2fr;*/
                     <h2 class="title2">CERTIFICATE</h2>
                     {% endif %} {% if object.certificate == '' %} {% else %}
                     <ul class="ul_set">
-                        <li>{{object.certificate}}</li>
+                        <li>{{object.certificate|linebreaksbr}}</li>
                     </ul>
                     {% endif %} {% endfor %} {% else %} {% endif %}
 

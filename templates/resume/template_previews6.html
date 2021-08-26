@@ -260,7 +260,7 @@
                             <h2 class="title2">Achievements</h2>
                             {% endif %} {% if object.achievements == '' %} {% else %}
                             <ul class="ul_set">
-                                <li>{{object.achievements}}</li>
+                                <li>{{object.achievements|linebreaksbr}}</li>
                             </ul>
                             {% endif %} {% endfor %} {% else %} {% endif %}
 
@@ -277,7 +277,7 @@
 
 
                             <ul class="ul_set">
-                                <li>{{object.certificate}}</li>
+                                <li>{{object.certificate|linebreaksbr}}</li>
 
                             </ul>
                             {% endif %} {% endfor %} {% else %} {% endif %}
