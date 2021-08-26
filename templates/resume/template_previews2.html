@@ -50,9 +50,9 @@
             outline: none;
         }
 
-        p {
+        /* p {
             margin-bottom: 15px;
-        }
+        } */
 
         textarea {
             width: 100%;
@@ -265,7 +265,7 @@ grid-template-columns: 1fr 2fr;*/
             color: #fff;
             font-size: 23px;
             margin-top: 20px;
-            text-transform: uppercase;
+            /* text-transform: uppercase; */
             text-align: center;
             font-weight: 600;
             line-height: 1.4em;
@@ -351,10 +351,11 @@ grid-template-columns: 1fr 2fr;*/
         .container .right_Side {
             position: relative;
             background-color: #fff;
-            padding-top: 20px;
+            margin-top: 30px;
         }
         p {
-    margin-bottom: 5px;
+    padding-bottom: 10px;
+    margin-bottom: 15px;;
 }
 
         .about {
@@ -389,13 +390,14 @@ grid-template-columns: 1fr 2fr;*/
 
         p {
             color: #081921;
+            /* margin: 0; */
         }
 
         .about .box {
             display: flex;
             gap: 1rem;
             flex-direction: row;
-            margin: 10px 0;
+            margin: 0;
         }
 
         .about .box .year_company {
@@ -877,7 +879,7 @@ grid-template-columns: 1fr 2fr;*/
 
 <script>
     $(".download").click(function () {
-        $(".wrapper").css("margin-top", "-25px");
+        $(".wrapper").css("margin-top", "0px");
         $(".wrapper").css("margin-bottom", "0px");
         window.print()
     })
