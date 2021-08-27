@@ -284,9 +284,14 @@ class UpdateDataView(View):
                 education_data.percentage_or_grade = percentage_or_grades[count]
                 education_data.save()
 
+
             skills_data_list = resume.skills_set.all()
+
+            # import pdb; pdb.set_trace()
+
             skills = request.POST.getlist("skills[]")
             print(skills)
+            
             res = max(idx for idx, val in enumerate(skills) if val == "")
             skills.pop(res)
             for count, skills_data in enumerate(skills_data_list):

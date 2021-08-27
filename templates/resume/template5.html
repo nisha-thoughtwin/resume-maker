@@ -324,15 +324,16 @@
                             <button class="add" type="button" data-name="achievements" id="add-achievements"><i
                                 class="fa fa-plus-square" aria-hidden="true"></i> Add Achievements !</button>
                         </div>
-                        <!-- <button type="button"  data-name="certificate" id="add-certificate"><i class="fa fa-plus secondary" aria-hidden="true" ></i>&nbsp; Add Certificate !</button> -->
+                        
                     </div>
                 </div>
 
 
                 <div class="about">
                     <h2 class="title2">CERTIFICATE</h2>
-                    {% for object in certificates%}
-                    <textarea placeholder="certificate here..." rows="4" cols="50" class="data certificate" id="certificate" name="certificate" required="">{{ object.certificate }}</textarea>
+
+                    {% for object in certificates %}
+                    <textarea placeholder="Certificate here..." rows="4" cols="50" class="data certificate" id="certificate" name="certificate" required="">{{object.certificate}}</textarea>
                     <div class="btnset">
                         <button type="button" class="Delete  delete_certificate_class" data-id="{{object.id}}"><i class="fa fa-trash" aria-hidden="true"></i> Delete</button>
                     </div>
@@ -340,7 +341,7 @@
 
                     <div class="tab">
                         <div class="form-group " id="resume-certificate" style="display: none;">
-                            <textarea placeholder="Certicate here..." rows="4" cols="50" class="data certificate" id="certificate" name="certificate" required="">{{object.certificate}}</textarea>
+                                        <textarea placeholder="Certicate here..." rows="4" cols="50" class="data certificate" id="certificate" name="certificate" required=""></textarea>
                         </div>
 
                         <div class="form-group another-certificate" id="another-certificate"></div>
@@ -348,7 +349,7 @@
                             <button class="add" type="button" data-name="certificate" id="add-certificate"><i
                                 class="fa fa-plus-square" aria-hidden="true"></i> Add Certificate !</button>
                         </div>
-                        <!-- <button type="button"  data-name="certificate" id="add-certificate"><i class="fa fa-plus secondary" aria-hidden="true" ></i>&nbsp; Add Certificate !</button> -->
+                       
                     </div>
                 </div>
             </div>
@@ -557,8 +558,8 @@
         }).get();
 
         var achievements = $('textarea[name^=achievements]').map(function(idx, elem) {
-            return $(elem).val();
-        }).get();
+                return $(elem).val();
+            }).get();
 
         var certificate = $('textarea[name^=certificate]').map(function(idx, elem) {
             return $(elem).val();
