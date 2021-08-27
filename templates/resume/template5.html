@@ -381,149 +381,149 @@
     }
 
     $("#add-education").click(function() {
-        var education_form = $('#resume-education').html();
+            var education_form = $('#resume-education').html();
 
-        $("#another-education").append(education_form);
-        var token = '{{csrf_token}}';
-        $.ajax({
-            headers: {
-                "X-CSRFToken": token
-            },
-            type: 'POST',
-            url: '/add_another/{{resume.id}}',
-            data: {
-                'element': $(this).data("name")
-            },
-            success: function(json) {}
+            $("#another-education").append(education_form);
+            var token = '{{csrf_token}}';
+            $.ajax({
+                headers: {
+                    "X-CSRFToken": token
+                },
+                type: 'POST',
+                url: '/add_another/{{resume.id}}',
+                data: {
+                    'element': $(this).data("name")
+                },
+                success: function(json) {}
+            })
+            window.location.reload(true);
+
         })
-        window.location.reload(true);
 
-    })
+        $("#add-experience").click(function() {
 
-    $("#add-experience").click(function() {
+            var experience_form = $('#resume-experience').html();
+            console.log($(this).data("name"))
+            $("#another-experience").append(experience_form);
+            var token = '{{csrf_token}}';
+            $.ajax({
+                headers: {
+                    "X-CSRFToken": token
+                },
+                type: 'POST',
+                url: '/add_another/{{resume.id}}',
+                data: {
+                    'element': $(this).data("name")
+                },
+                success: function(json) {}
+            })
+            window.location.reload(true);
 
-        var experience_form = $('#resume-experience').html();
-        console.log($(this).data("name"))
-        $("#another-experience").append(experience_form);
-        var token = '{{csrf_token}}';
-        $.ajax({
-            headers: {
-                "X-CSRFToken": token
-            },
-            type: 'POST',
-            url: '/add_another/{{resume.id}}',
-            data: {
-                'element': $(this).data("name")
-            },
-            success: function(json) {}
         })
-        window.location.reload(true);
 
-    })
+        $("#add-worksamples").click(function() {
 
-    $("#add-worksamples").click(function() {
+            var worksamples_form = $('#resume-worksamples').html();
+            console.log($(this).data("name"))
+            $("#another-worksamples").append(worksamples_form);
+            var token = '{{csrf_token}}';
+            $.ajax({
+                headers: {
+                    "X-CSRFToken": token
+                },
+                type: 'POST',
+                url: '/add_another/{{resume.id}}',
+                data: {
+                    'element': $(this).data("name")
+                },
+                success: function(json) {}
+            })
+            window.location.reload(true);
 
-        var worksamples_form = $('#resume-worksamples').html();
-        console.log($(this).data("name"))
-        $("#another-worksamples").append(worksamples_form);
-        var token = '{{csrf_token}}';
-        $.ajax({
-            headers: {
-                "X-CSRFToken": token
-            },
-            type: 'POST',
-            url: '/add_another/{{resume.id}}',
-            data: {
-                'element': $(this).data("name")
-            },
-            success: function(json) {}
         })
-        window.location.reload(true);
 
-    })
+        $("#add-achievements").click(function() {
 
-    $("#add-achievements").click(function() {
+            var achievements_form = $('#resume-achievements').html();
+            console.log($(this).data("name"))
+            $("#another-achievements").append(achievements_form);
+            var token = '{{csrf_token}}';
+            $.ajax({
+                headers: {
+                    "X-CSRFToken": token
+                },
+                type: 'POST',
+                url: '/add_another/{{resume.id}}',
+                data: {
+                    'element': $(this).data("name")
+                },
+                success: function(json) {}
+            })
+            window.location.reload(true);
 
-        var achievements_form = $('#resume-achievements').html();
-        console.log($(this).data("name"))
-        $("#another-achievements").append(achievements_form);
-        var token = '{{csrf_token}}';
-        $.ajax({
-            headers: {
-                "X-CSRFToken": token
-            },
-            type: 'POST',
-            url: '/add_another/{{resume.id}}',
-            data: {
-                'element': $(this).data("name")
-            },
-            success: function(json) {}
         })
-        window.location.reload(true);
 
-    })
+        $("#add-certificate").click(function() {
 
-    $("#add-certificate").click(function() {
+            var certificate_form = $('#resume-certificate').html();
+            console.log($(this).data("name"))
+            $("#another-certificate").append(certificate_form);
+            var token = '{{csrf_token}}';
+            $.ajax({
+                headers: {
+                    "X-CSRFToken": token
+                },
+                type: 'POST',
+                url: '/add_another/{{resume.id}}',
+                data: {
+                    'element': $(this).data("name")
+                },
+                success: function(json) {}
+            })
+            window.location.reload(true);
 
-        var certificate_form = $('#resume-certificate').html();
-        console.log($(this).data("name"))
-        $("#another-certificate").append(certificate_form);
-        var token = '{{csrf_token}}';
-        $.ajax({
-            headers: {
-                "X-CSRFToken": token
-            },
-            type: 'POST',
-            url: '/add_another/{{resume.id}}',
-            data: {
-                'element': $(this).data("name")
-            },
-            success: function(json) {}
         })
-        window.location.reload(true);
 
-    })
+        $("#add-skills").click(function() {
+            var skill_form = $('#resume-skills').html();
+            console.log($(this).data("name"))
+            $("#another-skills").append(skill_form);
+            var token = '{{csrf_token}}';
+            $.ajax({
+                headers: {
+                    "X-CSRFToken": token
+                },
+                type: 'POST',
+                url: '/add_another/{{resume.id}}',
+                data: {
+                    'element': $(this).data("name")
+                },
+                success: function(json) {}
+            })
+            window.location.reload(true);
 
-    $("#add-skills").click(function() {
-        var skill_form = $('#resume-skills').html();
-        console.log($(this).data("name"))
-        $("#another-skills").append(skill_form);
-        var token = '{{csrf_token}}';
-        $.ajax({
-            headers: {
-                "X-CSRFToken": token
-            },
-            type: 'POST',
-            url: '/add_another/{{resume.id}}',
-            data: {
-                'element': $(this).data("name")
-            },
-            success: function(json) {}
         })
-        window.location.reload(true);
 
-    })
+        $("#add-hobbies").click(function() {
 
-    $("#add-hobbies").click(function() {
+            var hobbies_form = $('#resume-hobbies').html();
+            console.log($(this).data("name"))
+            $("#another-hobbies").append(hobbies_form);
+            var token = '{{csrf_token}}';
+            $.ajax({
+                headers: {
+                    "X-CSRFToken": token
+                },
+                type: 'POST',
+                url: '/add_another/{{resume.id}}',
+                data: {
+                    'element': $(this).data("name")
+                },
+                success: function(json) {}
+            })
+            window.location.reload(true);
 
-        var hobbies_form = $('#resume-hobbies').html();
-        console.log($(this).data("name"))
-        $("#another-hobbies").append(hobbies_form);
-        var token = '{{csrf_token}}';
-        $.ajax({
-            headers: {
-                "X-CSRFToken": token
-            },
-            type: 'POST',
-            url: '/add_another/{{resume.id}}',
-            data: {
-                'element': $(this).data("name")
-            },
-            success: function(json) {}
         })
-        window.location.reload(true);
-
-    })
 
     $(document).on("keyup", ".data", function() {
         var token = '{{csrf_token}}';
