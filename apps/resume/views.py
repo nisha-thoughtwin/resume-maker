@@ -197,7 +197,7 @@ class UpdateDataView(View):
         """
         resume = Resume.objects.get(id=id)
         if request.method == "POST":
-            # import pdb; pdb.set_trace()
+           
             objective = request.POST.get("objective", "")
             title = request.POST.get("title", "")
             resume.objective = objective
@@ -286,12 +286,8 @@ class UpdateDataView(View):
 
 
             skills_data_list = resume.skills_set.all()
-
-            # import pdb; pdb.set_trace()
-
             skills = request.POST.getlist("skills[]")
             print(skills)
-            
             res = max(idx for idx, val in enumerate(skills) if val == "")
             skills.pop(res)
             for count, skills_data in enumerate(skills_data_list):
