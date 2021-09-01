@@ -46,6 +46,7 @@ class TeamLeader(View):
         user.save()
         return redirect("/users/user_list")
 
+from django.contrib.auth.hashers import make_password
 
 def sign_up(request, id=None):
     if request.method == "POST":

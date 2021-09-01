@@ -14,3 +14,6 @@ class User(AbstractUser):
         related_name="children",
         help_text="don't forget to check is_teamleader if parent is set",
     )
+
+
+   

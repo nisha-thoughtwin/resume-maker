@@ -75,42 +75,54 @@ class AddAnother(View):
     def post(self, request, id):
         resume = Resume.objects.get(id=id)
         element = request.POST.get("element")
+        id = None
         if element == "education":
             education = Education.objects.create()
             education.resume = resume
             education.save()
+            id = education.id
 
         if element == "skills":
+            
             skills = Skills.objects.create()
             skills.resume = resume
             skills.save()
+            print(skills.id)
+            id = skills.id            
 
         if element == "experience":
             experience = Experience.objects.create()
             experience.resume = resume
             experience.save()
+            print(experience.id)
+            id = experience.id
+            print("--" , experience)
 
         if element == "worksamples":
             worksamples = WorkSamples.objects.create()
             worksamples.resume = resume
             worksamples.save()
+            id = worksamples.id
 
         if element == "achievements":
             achievements = Achievements.objects.create()
             achievements.resume = resume
             achievements.save()
+            id = achievements.id
 
         if element == "certificate":
             certificate = Certificate.objects.create()
             certificate.resume = resume
             certificate.save()
+            id = certificate.id
 
         if element == "hobbies":
             hobbies = Hobbies.objects.create()
             hobbies.resume = resume
             hobbies.save()
+            id = hobbies.id
 
-        return HttpResponse("200 ok")
+        return HttpResponse(f'{id}')
 
 
 # Create template
@@ -151,7 +163,8 @@ class DeleteEducation(View):
 
 class DeleteWorkSamples(View):
     def get(self, request, id):
-        WorkSamples.objects.get(id=id).delete()
+        print("====",id)
+        WorkSamples.objects.get(id=id).delete()       
         return JsonResponse({"status": True})
 
 
@@ -197,7 +210,7 @@ class UpdateDataView(View):
         """
         resume = Resume.objects.get(id=id)
         if request.method == "POST":
-           
+            # import pdb; pdb.set_trace()
             objective = request.POST.get("objective", "")
             title = request.POST.get("title", "")
             resume.objective = objective
@@ -286,14 +299,21 @@ class UpdateDataView(View):
 
 
             skills_data_list = resume.skills_set.all()
+
+            # import pdb; pdb.set_trace()
+
             skills = request.POST.getlist("skills[]")
             print(skills)
+            skill_id  = list()
+            skill_data = list()
             res = max(idx for idx, val in enumerate(skills) if val == "")
             skills.pop(res)
             for count, skills_data in enumerate(skills_data_list):
                 skills_data.skills = skills[count]
                 
                 skills_data.save()
+                skill_id.append(str(skills_data.id))
+                skill_data.append(str(skills[count]))
 
             hobbies_data_list = resume.hobbies_set.all()
             hobbies = request.POST.getlist("hobbies[]")
@@ -311,7 +331,7 @@ class UpdateDataView(View):
             user_data.date_of_birth = request.POST.get("date_of_birth")
             user_data.resume = resume
             user_data.save()
-            response = HttpResponse("200 ok")
+            response = JsonResponse({'skill_id' : skill_id, 'skill_data' : skill_data})
             response.set_cookie("last_work", f"http://127.0.0.1:8000/update_data/{id}")
             return response
 

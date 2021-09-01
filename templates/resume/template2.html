@@ -3,23 +3,27 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Responsive CV</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" type="text/css" href="/static/css/template1/style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
 
     <!-- Summernote -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote-bs4.css" rel="stylesheet">
-    
+
 </head>
 <style type="text/css">
     .preview-btn {
@@ -27,10 +31,11 @@
         width: 100%;
         margin-top: 25px;
     }
-    
+
     .about.skills {
         padding-top: 40px;
     }
+
 </style>
 
 <body>
@@ -58,27 +63,33 @@
                     </form>
                 </div> -->
                 <br>
-              
-                <input type="text" class="data full_name" id="full_name" name="full_name" placeholder="Full name" value="{{resume.resumeuserdetails_set.get.full_name}}">
-                <input style="color: black;" type="text" class="data title" id="title" name="title" placeholder="title" value="{{resume.title}}">
+
+                <input type="text" class="data full_name" id="full_name" name="full_name" placeholder="Full name"
+                    value="{{resume.resumeuserdetails_set.get.full_name}}">
+                <input style="color: black;" type="text" class="data title" id="title" name="title" placeholder="title"
+                    value="{{resume.title}}">
             </div>
             <div class="contactInfo">
                 <h3 class="title3">Personal Details</h3>
                 <ul>
                     <li>
                         <div class="inputWithIcon inputIconBg">
-                            <input type="text" name="mobile" id="mobile" value="{{resume.resumeuserdetails_set.get.mobile}}" class="data mobile" placeholder="Phone Number"> <i class="fa fa-phone fa-lg fa-fw" aria-hidden="true"></i>
+                            <input type="text" name="mobile" id="mobile"
+                                value="{{resume.resumeuserdetails_set.get.mobile}}" class="data mobile"
+                                placeholder="Phone Number"> <i class="fa fa-phone fa-lg fa-fw" aria-hidden="true"></i>
                         </div>
                     </li>
                     <li>
                         <div class="inputWithIcon inputIconBg">
-                            <input type="text" name="email" id="email" class="data email" value="{{resume.resumeuserdetails_set.get.email}}" placeholder="jon_doe@example.com">
+                            <input type="text" name="email" id="email" class="data email"
+                                value="{{resume.resumeuserdetails_set.get.email}}" placeholder="jon_doe@example.com">
                             <i class="fa fa-envelope-o" aria-hidden="true"></i>
                         </div>
                     </li>
                     <li>
                         <div class="inputWithIcon inputIconBg">
-                            <input type="text" name="date_of_birth" id="date_of_birth" class="data date_of_birth" value="{{resume.resumeuserdetails_set.get.date_of_birth}}" placeholder="date of birth">
+                            <input type="text" name="date_of_birth" id="date_of_birth" class="data date_of_birth"
+                                value="{{resume.resumeuserdetails_set.get.date_of_birth}}" placeholder="date of birth">
                             <i class="fa fa-birthday-cake" aria-hidden="true"></i>
                         </div>
                     </li>
@@ -90,7 +101,8 @@
                         </li> -->
                     <li>
                         <div class="inputWithIcon inputIconBg">
-                            <input type="text" name="address" id="address" class="data address" value="{{resume.resumeuserdetails_set.get.address}}" placeholder="Moscow, Russia">
+                            <input type="text" name="address" id="address" class="data address"
+                                value="{{resume.resumeuserdetails_set.get.address}}" placeholder="Moscow, Russia">
                             <i class="fa fa-map-marker" aria-hidden="true"></i>
                         </div>
                     </li>
@@ -98,62 +110,81 @@
             </div>
             <div class="contactInfo education">
                 <h3 class="title3">Education</h3>
-                
-                    {% for object in educations %}
-                    
-                        <input type="text" class="data qualification_name" name="qualification_name" value="{{object.qualification_name}}" placeholder="Qualification name...">
-                    
-                        <input type="text" class="data university" name="university" placeholder="University name..." value="{{object.university}}">
-                   
-                        <input type="text" class="data year_of_passing" name="year_of_passing" placeholder="Year of passing..." value="{{object.year_of_passing}}">
-                   
-                        <input type="text" class="data percentage_or_grade" name="percentage_or_grade" placeholder="Grade..." value="{{object.percentage_or_grade}}">
-                   
+
+                {% for object in educations %}
+
+                <input type="text" class="data qualification_name" name="qualification_name"
+                    value="{{object.qualification_name}}" placeholder="Qualification name...">
+
+                <input type="text" class="data university" name="university" placeholder="University name..."
+                    value="{{object.university}}">
+
+                <input type="text" class="data year_of_passing" name="year_of_passing" placeholder="Year of passing..."
+                    value="{{object.year_of_passing}}">
+
+                <input type="text" class="data percentage_or_grade" name="percentage_or_grade" placeholder="Grade..."
+                    value="{{object.percentage_or_grade}}">
+
                 <div class="btnset">
                     <button type="submit" class="Delete  delete_education_class" data-id="{{object.id}}">Delete</button>
                 </div>
                 {% endfor %}
                 <div class="tab">
                     <div class="form-group" id="resume-education" style="display: none;">
-                        
-                                <input type="text" class="data qualification_name" id="qualification_name" name="qualification_name" placeholder="Qualification name...">
-                         
-                                <input type="text" class="data university" id="university" name="university" placeholder="University name...">
-                           
-                          
-                                <input type="text" class="data year_of_passing" id="year_of_passing" name="year_of_passing" placeholder="Year of passing...">
-                           
-                                <input type="text" class="data percentage_or_grade" id="percentage_or_grade" name="percentage_or_grade" placeholder="Grade...">
-                           
+
+                        <input type="text" class="data qualification_name" id="qualification_name"
+                            name="qualification_name" placeholder="Qualification name...">
+
+                        <input type="text" class="data university" id="university" name="university"
+                            placeholder="University name...">
+
+
+                        <input type="text" class="data year_of_passing" id="year_of_passing" name="year_of_passing"
+                            placeholder="Year of passing...">
+
+                        <input type="text" class="data percentage_or_grade" id="percentage_or_grade"
+                            name="percentage_or_grade" placeholder="Grade...">
+
+                        <!-- <div class="btnset">
+                            <button type="submit" class="Delete  delete_education_class" data-id="{{object.id}}">Delete</button>
+                        </div> -->
                     </div>
                     <div class="form-group another-education" id="another-education">
                     </div>
                     <div class="btnset">
                         <button class="add" type="button" data-name="education" id="add-education"><i
-                            class="fa fa-plus-square" aria-hidden="true"></i> Add Education !</button>
+                                class="fa fa-plus-square" aria-hidden="true"></i> Add Education !</button>
                     </div>
                 </div>
             </div>
             <div class="about skills">
                 <h3 class="title3">Professional skills</h3>
+                <!-- {{skills}} -->
                 {% for object in skills %}
                 <div class="box1">
-                    <input type="text" class="data skills" name="skills" placeholder="skills" value="{{ object.skills }}">
+                    <input type="text" class="data skills" name="skills" placeholder="skills"
+                        value="{{ object.skills }}">
                 </div>
                 <div class="btnset">
-                    <button type="button" class="Delete  delete_skills_class" data-id="{{object.id}}"><i class="fa fa-trash" aria-hidden="true"></i> Delete</button>
+                    <button type="button" class="Delete  delete_skills_class" data-id="{{object.id}}"><i
+                            class="fa fa-trash" aria-hidden="true"></i> Delete</button>
                 </div>
                 {% endfor %}
                 <div class="tab">
                     <div class="form-group" id="resume-skills" style="display: none;">
                         <div class="box1">
-                            <input type="text" class="data skills"   name="skills" placeholder="skills">
+                            <input type="text" class="data skills" name="skills" placeholder="skills">
                         </div>
+                        <!-- <div class="btnset">
+                            <button type="button" class="Delete  delete_skills_class" data-id="{{object.id}}"><i
+                                    class="fa fa-trash" aria-hidden="true"></i> Delete</button>
+                        </div> -->
                     </div>
                     <div class="form-group another-skills" id="another-skills">
                     </div>
                     <div class="btnset">
-                        <button class="add" type="button" data-name="skills" id="add-skills"><i class="fa fa-plus-square" aria-hidden="true"></i> Add Skills !</button>
+                        <button class="add" type="button" data-name="skills" id="add-skills"><i
+                                class="fa fa-plus-square" aria-hidden="true"></i> Add Skills !</button>
                     </div>
                 </div>
             </div>
@@ -162,21 +193,31 @@
                 {% for object in hobbies %}
                 <ul>
                     <li>
-                        <input type="text" class=" data hobbies" name="hobbies" placeholder="Hobbies" value="{{object.hobbies}}">
+                        <input type="text" class=" data hobbies" name="hobbies" placeholder="Hobbies"
+                            value="{{object.hobbies}}">
                     </li>
                 </ul>
                 <div class="btnset">
-                    <button type="button" class="Delete  delete_hobbies_class" data-id="{{object.id}}"><i class="fa fa-trash" aria-hidden="true"></i> Delete</button>
+                    <button type="button" class="Delete  delete_hobbies_class" data-id="{{object.id}}"><i
+                            class="fa fa-trash" aria-hidden="true"></i> Delete</button>
                 </div>
                 {% endfor %}
                 <div class="tab">
-                    <div class="form-group" id="resume-hobbies" style="display: none;">
-                        <input type="text" class=" data hobbies" id="hobbies" name="hobbies" placeholder="Hobbies">
+                    <div>
+                        <div class="form-group" id="resume-hobbies" style="display: none;">
+                            <input type="text" class=" data hobbies" id="hobbies" name="hobbies" placeholder="Hobbies">
+
+                        </div>
+                        <!-- <div class="btnset">
+                            <button type="button" class="Delete  delete_hobbies_class"><i class="fa fa-trash"
+                                    aria-hidden="true"></i> Delete</button>
+                        </div> -->
                     </div>
                     <div class="form-group another-hobbies" id="another-hobbies">
                     </div>
                     <div class="btnset">
-                        <button class="add" type="button" data-name="hobbies" id="add-hobbies"><i class="fa fa-plus-square" aria-hidden="true"></i> Add Interest !</button>
+                        <button class="add" type="button" data-name="hobbies" id="add-hobbies"><i
+                                class="fa fa-plus-square" aria-hidden="true"></i> Add Interest !</button>
                     </div>
                 </div>
             </div>
@@ -184,22 +225,27 @@
         <div class="right_Side">
             <div class="about">
                 <h2 class="title2">CAREER OBJECTIVE</h2>
-                <textarea class="data objective" placeholder="Career objective...." rows="4" cols="50" id="objective" name="objective" required="">{{resume.objective}}</textarea>
+                <textarea class="data objective" placeholder="Career objective...." rows="4" cols="50" id="objective"
+                    name="objective" required="">{{resume.objective}}</textarea>
             </div>
             <div class="about">
                 <h2 class="title2">Experience</h2>
                 {% for object in experiences %}
                 <div class="box">
                     <div class="year_company">
-                        <input type="text" class="data company_name" name="company_name" placeholder="Company Name" value="{{object.company_name}}">
+                        <input type="text" class="data company_name" name="company_name" placeholder="Company Name"
+                            value="{{object.company_name}}">
                         <input type="text" class="data place" name="place" placeholder="Place" value="{{object.place}}">
                     </div>
                     <div class="text">
-                        <textarea placeholder="Designation..." rows="4" cols="50" name="designation" id="designation" class="data designation" required="">{{object.designation}}</textarea>
-                        <textarea class="data role"   placeholder="Role here..." rows="4" cols="50" name="role"  required="">{{object.role}}</textarea>
-                       
+                        <textarea placeholder="Designation..." rows="4" cols="50" name="designation" id="designation"
+                            class="data designation" required="">{{object.designation}}</textarea>
+                        <textarea class="data role" placeholder="Role here..." rows="4" cols="50" name="role"
+                            required="">{{object.role}}</textarea>
+
                         <div class="btnset">
-                            <button type="button" class="Delete  delete_experience_class" data-id="{{object.id}}"><i class="fa fa-trash" aria-hidden="true"></i> Delete</button>
+                            <button type="button" class="Delete  delete_experience_class" data-id="{{object.id}}"><i
+                                    class="fa fa-trash" aria-hidden="true"></i> Delete</button>
                         </div>
                     </div>
                 </div>
@@ -208,21 +254,28 @@
                     <div class="form-group" id="resume-experience" style="display: none;">
                         <div class="box">
                             <div class="year_company">
-                                <input type="text" class="data company_name" name="company_name" id="company_name" placeholder="Company Name">
+                                <input type="text" class="data company_name" name="company_name" id="company_name"
+                                    placeholder="Company Name">
                                 <input type="text" class="data place" name="place" placeholder="Place">
                             </div>
                             <div class="text">
-                                <textarea placeholder="Designation..." rows="4" cols="50" name="designation" id="designation" class="data designation" required=""></textarea>
-                                <textarea class="data role" placeholder="Role here..." rows="4" cols="50" name="role" id="role" required=""></textarea>
+                                <textarea placeholder="Designation..." rows="4" cols="50" name="designation"
+                                    id="designation" class="data designation" required=""></textarea>
+                                <textarea class="data role" placeholder="Role here..." rows="4" cols="50" name="role"
+                                    id="role" required=""></textarea>
                             </div>
                         </div>
+                        <!-- <div class="btnset">
+                            <button type="button" class="Delete  delete_experience_class" data-id="{{object.id}}"><i
+                                    class="fa fa-trash" aria-hidden="true"></i> Delete</button>
+                        </div> -->
                     </div>
                     <div class="form-group another-experience" id="another-experience">
                     </div>
                     <div class="btnset">
                         <button class="add" type="button" data-name="experience" id="add-experience"><i
-                            class="fa fa-plus-square" aria-hidden="true"></i> Add Experience !</button>
-                        
+                                class="fa fa-plus-square" aria-hidden="true"></i> Add Experience !</button>
+
                     </div>
                 </div>
             </div>
@@ -231,16 +284,23 @@
                 {% for object in worksamples %}
                 <div class="box">
                     <div class="year_company">
-                        <input type="text" class="data project_name" name="project_name" value="{{object.project_name}}" placeholder="Project name...">
+                        <input type="text" class="data project_name" name="project_name" value="{{object.project_name}}"
+                            placeholder="Project name...">
                     </div>
                     <div class="text">
-                        <textarea placeholder="Project link..." rows="4" cols="50" class="data project_link" id="project_link" name="project_link" required="">{{object.project_link}}</textarea>
-                        <textarea placeholder="Technology..." rows="4" cols="50" id="technology" name="technology" class="data technology" required="">{{object.technology}}</textarea>
-                        <textarea placeholder="Description here..." rows="4" cols="50" class="data description" id="description" name="description" required="">{{object.description}}</textarea>
-                        <textarea placeholder="Role and Responsibilities here..." rows="4" cols="50" class="data responsibilities summernote" id="responsibilities" name="responsibilities" required="">{{ object.responsibilities|safe }}</textarea>
+                        <textarea placeholder="Project link..." rows="4" cols="50" class="data project_link"
+                            id="project_link" name="project_link" required="">{{object.project_link}}</textarea>
+                        <textarea placeholder="Technology..." rows="4" cols="50" id="technology" name="technology"
+                            class="data technology" required="">{{object.technology}}</textarea>
+                        <textarea placeholder="Description here..." rows="4" cols="50" class="data description"
+                            id="description" name="description" required="">{{object.description}}</textarea>
+                        <textarea placeholder="Role and Responsibilities here..." rows="4" cols="50"
+                            class="data responsibilities summernote" id="responsibilities" name="responsibilities"
+                            required="">{{ object.responsibilities|safe }}</textarea>
                         <div class="btnset">
-                            <button type="button" class="Delete  delete_worksamples_class" data-id="{{object.id}}"><i class="fa fa-trash" aria-hidden="true"></i> Delete</button>
-                            
+                            <button type="button" class="Delete  delete_worksamples_class" data-id="{{object.id}}"><i
+                                    class="fa fa-trash" aria-hidden="true"></i> Delete</button>
+
                         </div>
                     </div>
                 </div>
@@ -249,13 +309,24 @@
                     <div class="form-group" id="resume-worksamples" style="display: none;">
                         <div class="box">
                             <div class="year_company">
-                                <input type="text" class="data project_name" id="project_name" name="project_name" placeholder="Project name...">
+                                <input type="text" class="data project_name" id="project_name" name="project_name"
+                                    placeholder="Project name...">
                             </div>
                             <div class="text">
-                                <textarea placeholder="Project link..." rows="4" cols="50" class="data project_link" id="project_link" name="project_link" required=""></textarea>
-                                <textarea placeholder="Technology..." rows="4" cols="50" id="technology" name="technology" class="data technology" required=""></textarea>
-                                <textarea placeholder="Description here..." rows="4" cols="50" class="data description" id="description" name="description" required=""></textarea>
-                                <textarea placeholder="Role and Responsibilities here..." rows="4" cols="50" class=" data responsibilities" id="responsibilities" name="responsibilities" required=""></textarea>
+                                <textarea placeholder="Project link..." rows="4" cols="50" class="data project_link"
+                                    id="project_link" name="project_link" required=""></textarea>
+                                <textarea placeholder="Technology..." rows="4" cols="50" id="technology"
+                                    name="technology" class="data technology" required=""></textarea>
+                                <textarea placeholder="Description here..." rows="4" cols="50" class="data description"
+                                    id="description" name="description" required=""></textarea>
+                                <textarea placeholder="Role and Responsibilities here..." rows="4" cols="50"
+                                    class=" data responsibilities" id="responsibilities" name="responsibilities"
+                                    required=""></textarea>
+                                <!-- <div class="btnset">
+                                    <button type="button" class="Delete  delete_worksamples_class" data-id="{{object.id}}"><i
+                                            class="fa fa-trash" aria-hidden="true"></i> Delete</button>
+        
+                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -263,49 +334,61 @@
                     </div>
                     <div class="btnset">
                         <button class="add" type="button" data-name="worksamples" id="add-worksamples"><i
-                            class="fa fa-plus-square" aria-hidden="true"></i> Add Worksamples !</button>
+                                class="fa fa-plus-square" aria-hidden="true"></i> Add Worksamples !</button>
                     </div>
                 </div>
             </div>
             <div class="about">
                 <h2 class="title2">ACHIEVEMENTS</h2>
                 {% for object in achievements %}
-                <textarea placeholder="Achievements here..." rows="4" cols="50" class="data achievements" id="achievements" name="achievements" required="">{{object.achievements}}</textarea>
+                <textarea placeholder="Achievements here..." rows="4" cols="50" class="data achievements"
+                    id="achievements" name="achievements" required="">{{object.achievements}}</textarea>
                 <div class="btnset">
-                    <button type="button" class="Delete  delete_achievements_class" data-id="{{object.id}}"><i class="fa fa-trash" aria-hidden="true"></i> Delete</button>
+                    <button type="button" class="Delete  delete_achievements_class" data-id="{{object.id}}"><i
+                            class="fa fa-trash" aria-hidden="true"></i> Delete</button>
                 </div>
                 {% endfor %}
                 <div class="tab">
                     <div class="form-group" id="resume-achievements" style="display: none;">
-                        <textarea placeholder="Achievements here..." rows="4" cols="50" class="data achievements" id="achievements" name="achievements" required=""></textarea>
+                        <textarea placeholder="Achievements here..." rows="4" cols="50" class="data achievements"
+                            id="achievements" name="achievements" required=""></textarea>
+                        <!-- <div class="btnset">
+                                <button type="button" class="Delete  delete_achievements_class" data-id="{{object.id}}"><i
+                                        class="fa fa-trash" aria-hidden="true"></i> Delete</button>
+                            </div> -->
                     </div>
                     <div class="form-group another-achievements" id="another-achievements">
                     </div>
                     <div class="btnset">
                         <button class="add" type="button" data-name="achievements" id="add-achievements"><i
-                            class="fa fa-plus-square" aria-hidden="true"></i> Add Achievements !</button>
-                       
+                                class="fa fa-plus-square" aria-hidden="true"></i> Add Achievements !</button>
+
                     </div>
                 </div>
             </div>
             <div class="about">
                 <h2 class="title2">CERTIFICATE</h2>
                 {% for object in certificates %}
-                <textarea placeholder="Certificate here..." rows="4" cols="50" class="data certificate" id="certificate" name="certificate" required="">{{object.certificate}}</textarea>
+                <textarea placeholder="Certificate here..." rows="4" cols="50" class="data certificate" id="certificate"
+                    name="certificate" required="">{{object.certificate}}</textarea>
                 <div class="btnset">
-                    <!-- <a href="{% url 'deletecertificate' object.id %}"><button type="button" class="Delete"><i
-                        class="fa fa-trash" aria-hidden="true"></i> Delete</button></a> -->
-                    <button type="button" class="Delete  delete_certificate_class" data-id="{{object.id}}"><i class="fa fa-trash" aria-hidden="true"></i> Delete</button>
+                    <button type="button" class="Delete  delete_certificate_class" data-id="{{object.id}}"><i
+                            class="fa fa-trash" aria-hidden="true"></i> Delete</button>
                 </div>
                 {% endfor %}
                 <div class="tab">
                     <div class="form-group " id="resume-certificate" style="display: none;">
-                        <textarea placeholder="Certificate here..." rows="4" cols="50" class="data certificate" id="certificate" name="certificate" required=""></textarea>
+                        <textarea placeholder="Certificate here..." rows="4" cols="50" class="data certificate"
+                            id="certificate" name="certificate" required=""></textarea>
+                        <!-- <div class="btnset">                  
+                            <button type="button" class="Delete  delete_certificate_class" data-id="{{object.id}}"><i
+                                    class="fa fa-trash" aria-hidden="true"></i> Delete</button>
+                        </div> -->
                     </div>
                     <div class="form-group another-certificate" id="another-certificate"></div>
                     <div class="btnset">
                         <button class="add" type="button" data-name="certificate" id="add-certificate"><i
-                            class="fa fa-plus-square" aria-hidden="true"></i> Add Certificate !</button>
+                                class="fa fa-plus-square" aria-hidden="true"></i> Add Certificate !</button>
                     </div>
                     <!-- <button type="button"  data-name="certificate" id="add-certificate"><i class="fa fa-plus secondary" aria-hidden="true" ></i>&nbsp; Add Certificate !</button> -->
                 </div>
@@ -316,28 +399,28 @@
         </div>
     </div>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
     <script src="{% static '/js/delete.js' %}"></script>
-    
-    
+
     <script>
         function delay(callback, ms) {
             var timer = 0;
-            return function() {
+            return function () {
                 var context = this,
                     args = arguments;
                 clearTimeout(timer);
-                timer = setTimeout(function() {
+                timer = setTimeout(function () {
                     callback.apply(context, args);
                 }, ms || 0);
             };
         }
 
-        $("#add-education").click(function() {
-            var education_form = $('#resume-education').html();
-
-            $("#another-education").append(education_form);
+        $("#add-education").click(function () {
             var token = '{{csrf_token}}';
             $.ajax({
                 headers: {
@@ -348,17 +431,51 @@
                 data: {
                     'element': $(this).data("name")
                 },
-                success: function(json) {}
-            })
-            window.location.reload(true);
+                success: function (json) {
+                    var html = `
+                    <div id='education-${json}'>
+                        <div class="form-group" id="resume-education">
+                                <input type="text" class="data qualification_name" id="qualification_name"
+                                    name="qualification_name" placeholder="Qualification name...">
 
+                                <input type="text" class="data university" id="university" name="university"
+                                    placeholder="University name...">
+
+
+                                <input type="text" class="data year_of_passing" id="year_of_passing" name="year_of_passing"
+                                    placeholder="Year of passing...">
+
+                                <input type="text" class="data percentage_or_grade" id="percentage_or_grade"
+                                    name="percentage_or_grade" placeholder="Grade...">
+
+                                <div class="btnset">
+                                    <button type="submit" class="Delete" onclick='deleteEducation(\"${json}\")'>Delete</button>
+                            </div>
+                            </div>
+                        </div>
+                    `;
+                    $("#another-education").append(html);
+                }
+            })
         })
 
-        $("#add-experience").click(function() {
+        function deleteEducation(id) {
+            var token = '{{csrf_token}}';
+            $.ajax({
+                // headers: { "X-CSRFToken": token },
+                type: 'GET',
+                url: '/deleteeducation/' + id + '/',
+                data: {
+                    'data': "None",
+                },
+                success: function (json) {
+                    var myobj = document.getElementById("education-" + id);
+                    myobj.remove();
+                }
+            })
+        }
 
-            var experience_form = $('#resume-experience').html();
-            console.log($(this).data("name"))
-            $("#another-experience").append(experience_form);
+        $("#add-experience").click(function () {
             var token = '{{csrf_token}}';
             $.ajax({
                 headers: {
@@ -369,17 +486,53 @@
                 data: {
                     'element': $(this).data("name")
                 },
-                success: function(json) {}
+                success: function (json) {
+                    var html = `
+                                <div id='experience-${json}'>
+                                    <div class='form-group' id='resume-experience'> 
+                                        <div class='box'> 
+                                            <div class='year_company'>
+                                                        <input type='text' class='data company_name' name='company_name' id='company_name'
+                                                            placeholder='Company Name'>
+                                                        <input type='text' class='data place' name='place' placeholder='Place'>
+                                                    </div>
+                                                    <div class='text'>
+                                                        <textarea placeholder='Designation...' rows='4' cols='50' name='designation'
+                                                            id='designation' class='data designation' required=''></textarea>
+                                                        <textarea class='data role' placeholder='Role here...' rows='4' cols='50' name='role'
+                                                            id='role' required=''></textarea>
+
+                                                            <div class='btnset'>
+                                                                <button type='button' class='Delete' onclick='deleteExperience(\"${json}\")'><i
+                                                                class='fa fa-trash' aria-hidden='true'></i> Delete</button>
+                                                            </div>
+                                                    </div>
+                                            </div>                        
+                                    </div>                    
+                                </div> `;
+                    $("#another-experience").append(html);
+                }
             })
-            window.location.reload(true);
 
         })
 
-        $("#add-worksamples").click(function() {
+        function deleteExperience(id) {
+            // var id = $(this).data("id")           
+            var token = '{{csrf_token}}';
+            $.ajax({
+                type: 'GET',
+                url: '/deleteexperience/' + id + '/',
+                data: {
+                    'data': "None",
+                },
+                success: function (json) {
+                    var myobj = document.getElementById("experience-" + id);
+                    myobj.remove();
+                }
+            })
+        }
 
-            var worksamples_form = $('#resume-worksamples').html();
-            console.log($(this).data("name"))
-            $("#another-worksamples").append(worksamples_form);
+        $("#add-worksamples").click(function () {
             var token = '{{csrf_token}}';
             $.ajax({
                 headers: {
@@ -390,17 +543,56 @@
                 data: {
                     'element': $(this).data("name")
                 },
-                success: function(json) {}
+                success: function (json) {
+                    var html = `
+                <div id='worksamplediv-${json}'>
+                    <div class="form-group" id="resume-worksamples">
+                        <div class="box">
+                            <div class="year_company">
+                                <input type="text" class="data project_name" id="project_name" name="project_name"
+                                    placeholder="Project name...">
+                            </div>
+                            <div class="text">
+                                <textarea placeholder="Project link..." rows="4" cols="50" class="data project_link"
+                                    id="project_link" name="project_link" required=""></textarea>
+                                <textarea placeholder="Technology..." rows="4" cols="50" id="technology"
+                                    name="technology" class="data technology" required=""></textarea>
+                                <textarea placeholder="Description here..." rows="4" cols="50" class="data description"
+                                    id="description" name="description" required=""></textarea>
+                                <textarea placeholder="Role and Responsibilities here..." rows="4" cols="50"
+                                    class=" data responsibilities" id="responsibilities" name="responsibilities"
+                                    required=""></textarea>
+                                <div class="btnset">
+                                    <button type="button" class="Delete" onclick='deleteWorkSample(\"${json}\")'><i
+                                            class="fa fa-trash" aria-hidden="true"></i> Delete</button>
+        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    `;
+                    $("#another-worksamples").append(html);
+                }
             })
-            window.location.reload(true);
 
         })
+        function deleteWorkSample(id) {
+            var token = '{{csrf_token}}';
+            $.ajax({
+                type: 'GET',
+                url: '/deleteworksamples/' + id + '/',
+                data: {
+                    'data': "None",
+                },
+                success: function (json) {
+                    var myobj = document.getElementById("worksamplediv-" + id);
+                    myobj.remove();
+                }
+            })
+        }
 
-        $("#add-achievements").click(function() {
-
-            var achievements_form = $('#resume-achievements').html();
-            console.log($(this).data("name"))
-            $("#another-achievements").append(achievements_form);
+        $("#add-achievements").click(function () {
             var token = '{{csrf_token}}';
             $.ajax({
                 headers: {
@@ -411,18 +603,40 @@
                 data: {
                     'element': $(this).data("name")
                 },
-                success: function(json) {}
+                success: function (json) {
+                    var html = `
+                    <div id='achievement-${json}'>
+                        <div class="form-group" id="resume-achievements">
+                            <textarea placeholder="Achievements here..." rows="4" cols="50" class="data achievements"
+                                id="achievements" name="achievements" required=""></textarea>
+                                <div class="btnset">
+                                    <button type="button" class="Delete" onclick='deleteAchievement(\"${json}\")'><i
+                                            class="fa fa-trash" aria-hidden="true"></i> Delete</button>
+                                </div>
+                        </div>
+                    </div>
+                    `;
+                    $("#another-achievements").append(html);
+                }
             })
-            window.location.reload(true);
-                   
-  
         })
 
-        $("#add-certificate").click(function() {
+        function deleteAchievement(id) {
+            var token = '{{csrf_token}}';
+            $.ajax({
+                type: 'GET',
+                url: '/deleteachievements/' + id + '/',
+                data: {
+                    'data': "None",
+                },
+                success: function (json) {
+                    var myobj = document.getElementById("achievement-" + id);
+                    myobj.remove();
+                }
+            })
+        }
 
-            var certificate_form = $('#resume-certificate').html();
-            console.log($(this).data("name"))
-            $("#another-certificate").append(certificate_form);
+        $("#add-certificate").click(function () {
             var token = '{{csrf_token}}';
             $.ajax({
                 headers: {
@@ -433,17 +647,40 @@
                 data: {
                     'element': $(this).data("name")
                 },
-                success: function(json) {}
+                success: function (json) {
+                    var html = `
+                    <div id='certificate-${json}'>
+                        <div class="form-group " id="resume-certificate">
+                            <textarea placeholder="Certificate here..." rows="4" cols="50" class="data certificate"
+                                id="certificate" name="certificate" required=""></textarea>
+                            <div class="btnset">                  
+                                <button type="button" class="Delete" onclick='deleteCertificate(\"${json}\")'><i
+                                        class="fa fa-trash" aria-hidden="true"></i> Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                    `;
+                    $("#another-certificate").append(html);
+                }
             })
-            window.location.reload(true);
-
         })
 
-        $("#add-skills").click(function() {
-           
-            var skill_form = $('#resume-skills').html();
-            console.log($(this).data("name"))
-            $("#another-skills").append(skill_form);
+        function deleteCertificate(id) {
+            var token = '{{csrf_token}}';
+            $.ajax({
+                type: 'GET',
+                url: '/deletecertificate/' + id + '/',
+                data: {
+                    'data': "None",
+                },
+                success: function (json) {
+                    var myobj = document.getElementById("certificate-" + id);
+                    myobj.remove();
+                }
+            })
+        }
+
+        $("#add-skills").click(function () {
             var token = '{{csrf_token}}';
             $.ajax({
                 headers: {
@@ -454,17 +691,29 @@
                 data: {
                     'element': $(this).data("name")
                 },
-                success: function(json) {}
+                success: function (json) {
+                    $("#another-skills").append("<div id='" + "skill" + json + "' class='form-group'><div class='box1'><input type='text' class='data skills' name='skills' placeholder='skills'></div><div class='btnset'> <button type='button' class='Delete  delete_skills_class' onclick='deleteskill(\"" + json + "\")' data-id='" + json + "'><i class='fa fa-trash' aria-hidden='true'></i> Delete</button>  </div>  </div>")
+                }
             })
-            window.location.reload(true);
 
         })
+        function deleteskill(id) {
+            var token = '{{csrf_token}}';
+            $.ajax({
+                type: 'GET',
+                url: '/deleteskill/' + id + '/',
+                data: {
+                    'data': "None",
+                },
+                success: function (json) {
 
-        $("#add-hobbies").click(function() {
+                    var myobj = document.getElementById("skill" + id);
+                    myobj.remove();
+                }
+            })
+        }
 
-            var hobbies_form = $('#resume-hobbies').html();
-            console.log($(this).data("name"))
-            $("#another-hobbies").append(hobbies_form);
+        $("#add-hobbies").click(function () {
             var token = '{{csrf_token}}';
             $.ajax({
                 headers: {
@@ -475,76 +724,91 @@
                 data: {
                     'element': $(this).data("name")
                 },
-                success: function(json) {}
+                success: function (json) {
+                    $("#another-hobbies").append("<div id='" + "hobby" + json + "'> <div class='form-group' id='resume-hobbies'><input type = 'text' class= ' data hobbies' id = 'hobbies' name = 'hobbies' placeholder = 'Hobbies'></div> <div class='btnset'><button type='button' class='Delete  delete_hobbies_class' onclick='deletehobbies(\"" + json + "\")' data-id='" + json + "'><i class='fa fa-trash' aria-hidden='true'></i> Delete</button>  </div>  </div> ")
+                }
             })
-            window.location.reload(true);
-
         })
-
-        $(document).on("keyup", ".data", function() {
+        function deletehobbies(id) {
             var token = '{{csrf_token}}';
-            var company_name = $('input[name^=company_name]').map(function(idx, elem) {
+            $.ajax({
+                type: 'GET',
+                url: '/deletehobbie/' + id + '/',
+                data: {
+                    'data': "None",
+                },
+                success: function (json) {
+
+                    var myobj = document.getElementById("hobby" + id);
+                    myobj.remove();
+                }
+            })
+        }
+
+        $(document).on("keyup", ".data", function () {
+            var token = '{{csrf_token}}';
+            var company_name = $('input[name^=company_name]').map(function (idx, elem) {
                 return $(elem).val();
             }).get();
-            var designation = $('textarea[name^=designation]').map(function(idx, elem) {
+            var designation = $('textarea[name^=designation]').map(function (idx, elem) {
                 return $(elem).val();
             }).get();
-            var place = $('input[name^=place]').map(function(idx, elem) {
+            var place = $('input[name^=place]').map(function (idx, elem) {
                 return $(elem).val();
             }).get();
-            
-            var role = $('textarea[name^=role]').map(function(idx, elem) {
+            debugger
+            var role = $('textarea[name^=role]').map(function (idx, elem) {
                 return $(elem).val();
             }).get();
 
-            var project_name = $('input[name^=project_name]').map(function(idx, elem) {
+            var project_name = $('input[name^=project_name]').map(function (idx, elem) {
                 return $(elem).val();
             }).get();
-            var project_link = $('textarea[name^=project_link]').map(function(idx, elem) {
+            var project_link = $('textarea[name^=project_link]').map(function (idx, elem) {
                 return $(elem).val();
             }).get();
-            var technology = $('textarea[name^=technology]').map(function(idx, elem) {
+            var technology = $('textarea[name^=technology]').map(function (idx, elem) {
                 return $(elem).val();
             }).get();
-            var description = $('textarea[name^=description]').map(function(idx, elem) {
+            var description = $('textarea[name^=description]').map(function (idx, elem) {
                 return $(elem).val();
             }).get();
-            var responsibilities = $('textarea[name^=responsibilities]').map(function(idx, elem) {
-                return $(elem).val();
-            }).get();
-
-            var achievements = $('textarea[name^=achievements]').map(function(idx, elem) {
+            var responsibilities = $('textarea[name^=responsibilities]').map(function (idx, elem) {
                 return $(elem).val();
             }).get();
 
-            var certificate = $('textarea[name^=certificate]').map(function(idx, elem) {
+            var achievements = $('textarea[name^=achievements]').map(function (idx, elem) {
                 return $(elem).val();
             }).get();
 
-            var qualification_name = $('input[name^=qualification_name]').map(function(idx, elem) {
+            var certificate = $('textarea[name^=certificate]').map(function (idx, elem) {
                 return $(elem).val();
             }).get();
-            var university = $('input[name^=university]').map(function(idx, elem) {
+
+            var qualification_name = $('input[name^=qualification_name]').map(function (idx, elem) {
                 return $(elem).val();
             }).get();
-            var year_of_passing = $('input[name^=year_of_passing]').map(function(idx, elem) {
+            var university = $('input[name^=university]').map(function (idx, elem) {
                 return $(elem).val();
             }).get();
-            var percentage_or_grade = $('input[name^=percentage_or_grade]').map(function(idx, elem) {
+            var year_of_passing = $('input[name^=year_of_passing]').map(function (idx, elem) {
                 return $(elem).val();
             }).get();
-            var skills = $('input[name^=skills]').map(function(idx, elem) {
+            var percentage_or_grade = $('input[name^=percentage_or_grade]').map(function (idx, elem) {
+                return $(elem).val();
+            }).get();
+            var skills = $('input[name^=skills]').map(function (idx, elem) {
                 return $(elem).val();
             }).get();
 
 
-            var hobbies = $('input[name^=hobbies]').map(function(idx, elem) {
+            var hobbies = $('input[name^=hobbies]').map(function (idx, elem) {
                 return $(elem).val();
             }).get();
 
             var obj = $(this)
             var id = obj.data('id');
-            console.log(qualification_name)
+            console.log(qualification_name, id)
 
 
             $.ajax({
@@ -582,13 +846,13 @@
                     'date_of_birth': $('.date_of_birth').val(),
                     'full_name': $('.full_name').val(),
                 },
-                success: function(json) {}
+                success: function (json) { }
             })
         })
     </script>
     <script type="text/javascript">
-        $(document).ready(function() {
-            $(".delete_education_class").on('click', function() {
+        $(document).ready(function () {
+            $(".delete_education_class").on('click', function () {
                 var id = $(this).data("id")
                 var token = '{{csrf_token}}';
                 $.ajax({
@@ -598,15 +862,16 @@
                     data: {
                         'data': "None",
                     },
-                    success: function(json) {
+                    success: function (json) {
                         window.location.reload(true);
                     }
                 })
             })
         });
-        $(document).ready(function() {
-            $(".delete_skills_class").on('click', function() {
+        $(document).ready(function () {
+            $(".delete_skills_class").on('click', function () {
                 var id = $(this).data("id")
+                console.log(id);
                 var token = '{{csrf_token}}';
                 $.ajax({
                     type: 'GET',
@@ -614,14 +879,14 @@
                     data: {
                         'data': "None",
                     },
-                    success: function(json) {
+                    success: function (json) {
                         window.location.reload(true);
                     }
                 })
             })
         });
-        $(document).ready(function() {
-            $(".delete_hobbies_class").on('click', function() {
+        $(document).ready(function () {
+            $(".delete_hobbies_class").on('click', function () {
                 var id = $(this).data("id")
                 var token = '{{csrf_token}}';
                 $.ajax({
@@ -630,14 +895,14 @@
                     data: {
                         'data': "None",
                     },
-                    success: function(json) {
+                    success: function (json) {
                         window.location.reload(true);
                     }
                 })
             })
         });
-        $(document).ready(function() {
-            $(".delete_experience_class").on('click', function() {
+        $(document).ready(function () {
+            $(".delete_experience_class").on('click', function () {
                 var id = $(this).data("id")
                 var token = '{{csrf_token}}';
                 $.ajax({
@@ -646,14 +911,14 @@
                     data: {
                         'data': "None",
                     },
-                    success: function(json) {
+                    success: function (json) {
                         window.location.reload(true);
                     }
                 })
             })
         });
-        $(document).ready(function() {
-            $(".delete_worksamples_class").on('click', function() {
+        $(document).ready(function () {
+            $(".delete_worksamples_class").on('click', function () {
                 var id = $(this).data("id")
                 var token = '{{csrf_token}}';
                 $.ajax({
@@ -662,14 +927,14 @@
                     data: {
                         'data': "None",
                     },
-                    success: function(json) {
+                    success: function (json) {
                         window.location.reload(true);
                     }
                 })
             })
         });
-        $(document).ready(function() {
-            $(".delete_achievements_class").on('click', function() {
+        $(document).ready(function () {
+            $(".delete_achievements_class").on('click', function () {
                 var id = $(this).data("id")
                 var token = '{{csrf_token}}';
                 $.ajax({
@@ -678,14 +943,14 @@
                     data: {
                         'data': "None",
                     },
-                    success: function(json) {
+                    success: function (json) {
                         window.location.reload(true);
                     }
                 })
             })
         });
-        $(document).ready(function() {
-            $(".delete_certificate_class").on('click', function() {
+        $(document).ready(function () {
+            $(".delete_certificate_class").on('click', function () {
                 var id = $(this).data("id")
                 var token = '{{csrf_token}}';
                 $.ajax({
@@ -694,7 +959,7 @@
                     data: {
                         'data': "None",
                     },
-                    success: function(json) {
+                    success: function (json) {
                         window.location.reload(true);
                     }
                 })
@@ -702,8 +967,8 @@
         });
     </script>
 
-    
-    
+
+
 </body>
 
 </html>
