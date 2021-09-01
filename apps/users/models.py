@@ -1,6 +1,6 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
-
+from django.contrib.auth.hashers import make_password
 
 # Create your models here.
 class User(AbstractUser):
@@ -15,5 +15,7 @@ class User(AbstractUser):
         help_text="don't forget to check is_teamleader if parent is set",
     )
 
-
-   
+    def clean(self):
+        super().clean()
+        self.password = make_password(self.password)
+        return self.password

@@ -11,9 +11,9 @@ class UserInline(admin.StackedInline):
 
 
 class UserAdmin(admin.ModelAdmin):
-    inlines = [
-        UserInline,
-    ]
+    # inlines = [
+    #     UserInline,
+    # ]
     list_display = ["username", "account_approved","parent","is_teamleader"]
 
 
