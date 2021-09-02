@@ -52,7 +52,15 @@
         <div class="line-break">
         </div>
         <!-- <a href="{% url 'home' %}">submit</a> -->
-        <input id="show-toast" onclick="showToast()" type="submit" value="Signin" /> {% if id is None %} Don't have an account? <a href="{% url 'sign_up'%}">Sign Up</a> {% else %} Don't have an account? <a href="{% url 'sign_up' id%}">Sign Up</a> {% endif%}
+        <input id="show-toast" onclick="showToast()" type="submit" value="Signin" /> 
+        {% if id is None %} 
+        Don't have an account? 
+        <a href="{% url 'sign_up'%}">Sign Up</a> {% else %} Don't have an account?
+         <a href="{% url 'sign_up' id%}">Sign Up</a> 
+         <a href="{% url 'update_password' id %}">Update Password</a> 
+         {% endif%}
+         <a href="{% url 'update_password' %}">Update Password</a> 
+
     </form>
     <!-- partial -->
     <script src='/static/script.js'></script>

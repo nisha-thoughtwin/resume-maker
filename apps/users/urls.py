@@ -10,4 +10,5 @@ urlpatterns = [
     path("login/<uuid:id>/", sign_in, name="sign_in"),
     path("sign_up/", sign_up, name="sign_up"),
     path("sign_up/<uuid:id>", sign_up, name="sign_up"),
+    path("update_password/", UpdatePassword.as_view(), name="update_password"),
 ]

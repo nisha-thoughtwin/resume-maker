@@ -112,3 +112,43 @@ def sign_in(request, id=None):
             messages.info(request, f"Your account does not exist ")
     form = AuthenticationForm()
     return render(request, "resume/sign_in.html", {"id": id})
+
+
+class UpdatePassword(View):
+    def get(self, request):
+        return render(request, "resume/update_password.html")
+    
+    def post(self, request):
+        current_password = request.POST['current_password']
+        new_password = request.POST['new_password']
+        confirm_password = request.POST['confirm_password']
+       
+        if request.user.is_authenticated:
+            user =request.user
+        else:
+            username = request.POST['username']
+            user = User.objects.get(username=username)
+        if user.check_password(current_password):
+            if new_password == confirm_password:
+                user.set_password(new_password)
+                user.save()
+                messages.success(request, "Password is Changed Successfully") 
+                return redirect('/users/login')   
+            else:
+                messages.info(request, " Confirm Password Not Matched")
+                print('confirm')
+                return redirect(f'/users/update_password/')        
+        else:
+            messages.info(request, "Current Password is incorrect")
+            print("current")
+            return redirect(f'/users/update_password/')
+        
+        
+        
+            
+        
+            
+                
+                
+        
+        
