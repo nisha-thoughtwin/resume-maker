@@ -5,7 +5,7 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth.forms import AuthenticationForm
 from django.db import IntegrityError
 from django.http import HttpResponse
-from django.shortcuts import redirect, render, HttpResponse
+from django.shortcuts import redirect, render
 from django.views import View
 
 from apps.resume.models import *
@@ -46,11 +46,9 @@ class TeamLeader(View):
         user.save()
         return redirect("/users/user_list")
 
-from django.contrib.auth.hashers import make_password
 
 def sign_up(request, id=None):
     if request.method == "POST":
-        # import pdb; pdb.set_trace()
         print(request.POST)
         first_name = request.POST["firstname"]
         last_name = request.POST["lastname"]
@@ -80,7 +78,7 @@ def sign_up(request, id=None):
                 return redirect("dashboard")
 
         except IntegrityError as e:
-            return Response(
+            return render(
                 request,
                 "resume/sign_up.html",
                 {
@@ -98,11 +96,14 @@ def sign_in(request, id=None):
     if request.method == "POST":
 
         # AuthenticationForm_can_also_be_used__
-        # import pdb; pdb.set_trace()
-        
+
         username = request.POST["username"]
         password = request.POST["password"]
+        # import pdb; pdb.set_trace()
         user = authenticate(request, username=username, password=password)
+        # user.set_password(password)
+        # user.save(using=self._db)
+
         if id is not None:
             resume = Resume.objects.get(id=id)
             resume.user = user
