@@ -49,8 +49,10 @@
         </div>
         <div class="line-break"></div>
         {% if id is None %}
-        <input id="register" type="submit" value="Register" /> Already have an account? <a href="{% url 'sign_in'%}">Sign In</a> {% else %}
-        <input id="register" type="submit" value="Register" /> Already have an account? <a href="{% url 'sign_in' id %}">Sign In</a> {% endif %}
+        <input id="register" type="submit" value="Register" /> Already have an account? <a href="{% url 'sign_in' %}">Sign In</a> 
+        {% else %}
+        <input id="register" type="submit" value="Register" /> Already have an account? <a href="{% url 'sign_in' id %}">Sign In</a>
+         {% endif %}
     </form>
     <!-- partial -->
     <script src="/static/script.js"></script>

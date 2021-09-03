@@ -2,11 +2,13 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Responsive CV</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" type="text/css" href="/static/css/template5editable/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -18,9 +20,10 @@
 <body>
     <div class="containers">
         <div class="name_sec">
-            <input type="text" class="data full_name" id="full_name" name="full_name" placeholder="Full name" value="{{resume.resumeuserdetails_set.get.full_name}}">
+            <input type="text" class="data full_name" id="full_name" name="full_name" placeholder="Full name"
+                value="{{resume.resumeuserdetails_set.get.full_name}}">
             <input type="text" class="data title" id="title" name="title" placeholder="Title" value="{{resume.title}}">
-            
+
         </div>
         <table>
 
@@ -30,27 +33,32 @@
                 <div class="row">
                     <div class="col-md-3">
                         <div class="inputWithIcon inputIconBg">
-                            <input type="text" name="mobile" id="mobile" value="{{resume.resumeuserdetails_set.get.mobile}}" class="data mobile" placeholder="Phone Number"> <i class="fa fa-phone fa-lg fa-fw" aria-hidden="true"></i>
+                            <input type="text" name="mobile" id="mobile"
+                                value="{{resume.resumeuserdetails_set.get.mobile}}" class="data mobile"
+                                placeholder="Phone Number"> <i class="fa fa-phone fa-lg fa-fw" aria-hidden="true"></i>
                         </div>
                     </div>
 
                     <div class="col-md-3">
                         <div class="inputWithIcon inputIconBg">
-                            <input type="text" name="email" id="email" class="data email" value="{{resume.resumeuserdetails_set.get.email}}" placeholder="jon_doe@example.com">
+                            <input type="text" name="email" id="email" class="data email"
+                                value="{{resume.resumeuserdetails_set.get.email}}" placeholder="jon_doe@example.com">
                             <i class="fa fa-envelope-o" aria-hidden="true"></i>
                         </div>
                     </div>
 
                     <div class="col-md-3">
                         <div class="inputWithIcon inputIconBg">
-                            <input type="text" name="address" id="address" class="data address" value="{{resume.resumeuserdetails_set.get.address}}" placeholder="Address">
+                            <input type="text" name="address" id="address" class="data address"
+                                value="{{resume.resumeuserdetails_set.get.address}}" placeholder="Address">
                             <i class="fa fa-map-marker" aria-hidden="true"></i>
                         </div>
                     </div>
 
                     <div class="col-md-3">
                         <div class="inputWithIcon inputIconBg">
-                            <input type="text" name="date_of_birth" id="date_of_birth" class="data date_of_birth" value="{{resume.resumeuserdetails_set.get.date_of_birth}}" placeholder="Date of birth">
+                            <input type="text" name="date_of_birth" id="date_of_birth" class="data date_of_birth"
+                                value="{{resume.resumeuserdetails_set.get.date_of_birth}}" placeholder="Date of birth">
                             <i class="fa fa-birthday-cake" aria-hidden="true"></i>
                         </div>
                     </div>
@@ -64,18 +72,20 @@
                     {% for object in skills %}
                     <div id="skill{{object.id}}">
 
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="box">
-                                <input type="text" class="data skills" name="skills" placeholder="skills" value="{{ object.skills }}" placeholder="Skills">
-                            </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="box">
+                                    <input type="text" class="data skills" name="skills" placeholder="skills"
+                                        value="{{ object.skills }}" placeholder="Skills">
+                                </div>
 
-                            <div class="btnset">
-                        <button type="button" class="Delete" onclick="deleteskill('{{object.id}}')"
-                            data-id="{{object.id}}"><i class="fa fa-trash" aria-hidden="true"></i> Delete</button>
-                    </div>
+                                <div class="btnset">
+                                    <button type="button" class="Delete" onclick="deleteskill('{{object.id}}')"
+                                        data-id="{{object.id}}"><i class="fa fa-trash" aria-hidden="true"></i>
+                                        Delete</button>
+                                </div>
+                            </div>
                         </div>
-                    </div>
                     </div>
 
                     {% endfor %}
@@ -85,7 +95,8 @@
                             <div class="row">
                                 <div class="col-md-3">
                                     <div class="box">
-                                        <input type="text" class="data skills" name="skills" placeholder="skills" placeholder="Skills">
+                                        <input type="text" class="data skills" name="skills" placeholder="skills"
+                                            placeholder="Skills">
                                     </div>
                                 </div>
                             </div>
@@ -98,7 +109,8 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="btnset">
-                                    <button class="add" type="button" data-name="skills" id="add-skills"><i class="fa fa-plus-square" aria-hidden="true"></i> Add Skills !</button>
+                                    <button class="add" type="button" data-name="skills" id="add-skills"><i
+                                            class="fa fa-plus-square" aria-hidden="true"></i> Add Skills !</button>
                                 </div>
                             </div>
                         </div>
@@ -114,20 +126,27 @@
                     <div id="education-{{object.id}}">
 
 
-                    <div class="row">
-                        <div class="col-md-12"><input type="text" class="data qualification_name" name="qualification_name" value="{{object.qualification_name}}" placeholder="Qualification name..."></div>
+                        <div class="row">
+                            <div class="col-md-12"><input type="text" class="data qualification_name"
+                                    name="qualification_name" value="{{object.qualification_name}}"
+                                    placeholder="Qualification name..."></div>
 
-                        <div class="col-md-12"><input type="text" class="data university" name="university" placeholder="University name..." value="{{object.university}}"></div>
+                            <div class="col-md-12"><input type="text" class="data university" name="university"
+                                    placeholder="University name..." value="{{object.university}}"></div>
 
-                        <div class="col-md-12"><input type="text" class="data year_of_passing" name="year_of_passing" placeholder="Year of passing..." value="{{object.year_of_passing}}"></div>
+                            <div class="col-md-12"><input type="text" class="data year_of_passing"
+                                    name="year_of_passing" placeholder="Year of passing..."
+                                    value="{{object.year_of_passing}}"></div>
 
-                        <div class="col-md-12"><input type="text" class="data percentage_or_grade" name="percentage_or_grade" placeholder="Grade..." value="{{object.percentage_or_grade}}"></div>
-                    </div>
-                    <div class="btnset">
-                        <button type="button" class="Delete" onclick="deleteEducation('{{object.id}}')"
-                            data-id="{{object.id}}"><i class="fa fa-trash" aria-hidden="true"></i> Delete</button>
-                    </div>
-        
+                            <div class="col-md-12"><input type="text" class="data percentage_or_grade"
+                                    name="percentage_or_grade" placeholder="Grade..."
+                                    value="{{object.percentage_or_grade}}"></div>
+                        </div>
+                        <div class="btnset">
+                            <button type="button" class="Delete" onclick="deleteEducation('{{object.id}}')"
+                                data-id="{{object.id}}"><i class="fa fa-trash" aria-hidden="true"></i> Delete</button>
+                        </div>
+
                     </div>
                     {% endfor %}
 
@@ -135,16 +154,20 @@
                         <div class="form-group" id="resume-education" style="display: none;">
                             <!-- <ul> -->
                             <!-- <li> -->
-                            <input type="text" class="data qualification_name" id="qualification_name" name="qualification_name" placeholder="Qualification name...">
+                            <input type="text" class="data qualification_name" id="qualification_name"
+                                name="qualification_name" placeholder="Qualification name...">
                             <!-- </li> -->
                             <!-- <li> -->
-                            <input type="text" class="data university" id="university" name="university" placeholder="University name...">
+                            <input type="text" class="data university" id="university" name="university"
+                                placeholder="University name...">
                             <!-- </li>
                                 <li>         -->
-                            <input type="text" class="data year_of_passing" id="year_of_passing" name="year_of_passing" placeholder="Year of passing...">
+                            <input type="text" class="data year_of_passing" id="year_of_passing" name="year_of_passing"
+                                placeholder="Year of passing...">
                             <!-- </li>
                                 <li> -->
-                            <input type="text" class="data percentage_or_grade" id="percentage_or_grade" name="percentage_or_grade" placeholder="Grade...">
+                            <input type="text" class="data percentage_or_grade" id="percentage_or_grade"
+                                name="percentage_or_grade" placeholder="Grade...">
                             <!-- </li> -->
                             <!-- </ul> -->
                         </div>
@@ -158,95 +181,102 @@
                         </div>
                     </div>
                 </div>
-
-
-
-
-                <div class="about" >
+                <div class="about">
                     <h2 class="title2">CAREER OBJECTIVE</h2>
                     <div class="row">
                         <div class="col-md-12">
-                            <textarea placeholder="Career objective...." rows="4" cols="50" id="textareaInput" class="data objective" name="objective" required="">{{resume.objective}}</textarea>
+                            <textarea placeholder="Career objective...." rows="4" cols="50" id="textareaInput"
+                                class="data objective" name="objective" required="">{{resume.objective}}</textarea>
                         </div>
                     </div>
                 </div>
 
                 <div class="about">
-                    <h2 class="title2">Experience</h2>  
+                    <h2 class="title2">Experience</h2>
                     {% for object in experiences %}
-                        <div id="experience-{{object.id}}">
+                    <div id="experience-{{object.id}}">
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="year_company">
-                                    <input type="text" class="data company_name" name="company_name" placeholder="Company Name" value="{{object.company_name}}">
-                                    <input type="text" class="data place" name="place" placeholder="Place" value="{{object.place}}">
+                                    <input type="text" class="data company_name" name="company_name"
+                                        placeholder="Company Name" value="{{object.company_name}}">
+                                    <input type="text" class="data place" name="place" placeholder="Place"
+                                        value="{{object.place}}">
                                 </div>
                             </div>
 
                             <div class="col-md-8">
-                                    <div class="text">
-                                            <!-- <h4>Senior UX Developer</h4> -->
-                                            <textarea placeholder="Designation..." rows="4" cols="50" name="designation" id="designation" class="data designation" required="">{{ object.designation }}</textarea>
-                                            <textarea placeholder="Role here..." rows="4" cols="50" class="data role" name="role" id="role" required="">{{ object.role }}</textarea>
-                                            <div class="btnset">
-                                                <button type="button" class="Delete" data-id="{{object.id}}"
-                                                onclick="deleteExperience('{{object.id}}')"><i class="fa fa-trash"
-                                                    aria-hidden="true"></i> Delete</button>
-                                            </div>
-                                       
-
+                                <div class="text">
+                                    <!-- <h4>Senior UX Developer</h4> -->
+                                    <textarea placeholder="Designation..." rows="4" cols="50" name="designation"
+                                        id="designation" class="data designation"
+                                        required="">{{ object.designation }}</textarea>
+                                    <textarea placeholder="Role here..." rows="4" cols="50" class="data role"
+                                        name="role" id="role" required="">{{ object.role }}</textarea>
+                                    <div class="btnset">
+                                        <button type="button" class="Delete" data-id="{{object.id}}"
+                                            onclick="deleteExperience('{{object.id}}')"><i class="fa fa-trash"
+                                                aria-hidden="true"></i> Delete</button>
                                     </div>
+
+
                                 </div>
+                            </div>
                         </div>
-                        </div>
-                        {% endfor %}
+                    </div>
+                    {% endfor %}
 
 
-                        <div class="tab">
-                            <div class="form-group" id="resume-experience" style="display: none;">
-                                <div class="row">
-                                    <div class="col-md-6"><input type="text" class="data company_name" name="company_name" placeholder="Company Name"></div>
-                                    <div class="col-md-6"><input type="text" class="data place" name="place" placeholder="Place"></div>
-                                </div>
-
-                                <textarea placeholder="Designation..." rows="4" cols="50" name="designation" id="designation" class="data designation" required=""></textarea>
-                                <textarea placeholder="Role here..." rows="4" cols="50" class="data role" id="role" name="role" required=""></textarea>
+                    <div class="tab">
+                        <div class="form-group" id="resume-experience" style="display: none;">
+                            <div class="row">
+                                <div class="col-md-6"><input type="text" class="data company_name" name="company_name"
+                                        placeholder="Company Name"></div>
+                                <div class="col-md-6"><input type="text" class="data place" name="place"
+                                        placeholder="Place"></div>
                             </div>
 
-                            <div class="form-group another-experience" id="another-experience">
+                            <textarea placeholder="Designation..." rows="4" cols="50" name="designation"
+                                id="designation" class="data designation" required=""></textarea>
+                            <textarea placeholder="Role here..." rows="4" cols="50" class="data role" id="role"
+                                name="role" required=""></textarea>
+                        </div>
 
-                            </div>
+                        <div class="form-group another-experience" id="another-experience">
 
                         </div>
 
                     </div>
-                    <div class="btnset">
-                        <button class="add" type="button" data-name="experience" id="add-experience"><i
-                                class="fa fa-plus-square" aria-hidden="true"></i> Add Experience !</button>
 
-                    </div>
-                
+                </div>
+                <div class="btnset">
+                    <button class="add" type="button" data-name="experience" id="add-experience"><i
+                            class="fa fa-plus-square" aria-hidden="true"></i> Add Experience !</button>
+
+                </div>
+
                 <div class="about interest">
                     <h2 class="title2">Interests</h2>
                     {% for object in hobbies %}
                     <div id="hobby{{object.id}}">
 
 
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="inputWithIcon inputIconBg">
-                                <input type="text" class=" data hobbies" name="hobbies" placeholder="Interest" value="{{object.hobbies}}">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="inputWithIcon inputIconBg">
+                                    <input type="text" class=" data hobbies" name="hobbies" placeholder="Interest"
+                                        value="{{object.hobbies}}">
+                                </div>
                             </div>
+
+
+                        </div>
+                        <div class="btnset">
+                            <button type="button" class="Delete" data-id="{{object.id}}"
+                                onclick="deletehobbies('{{object.id}}')"><i class="fa fa-trash" aria-hidden="true"></i>
+                                Delete</button>
                         </div>
 
-
-                    </div>
-                     <div class="btnset">
-                        <button type="button" class="Delete" data-id="{{object.id}}"
-                            onclick="deletehobbies('{{object.id}}')"><i class="fa fa-trash" aria-hidden="true"></i>
-                            Delete</button>
-                    </div>
-                   
                     </div>
                     {% endfor %}
 
@@ -259,7 +289,8 @@
 
                         </div>
                         <div class="btnset">
-                            <button class="add" type="button" data-name="hobbies" id="add-hobbies"><i class="fa fa-plus-square" aria-hidden="true"></i> Add Interest !</button>
+                            <button class="add" type="button" data-name="hobbies" id="add-hobbies"><i
+                                    class="fa fa-plus-square" aria-hidden="true"></i> Add Interest !</button>
                         </div>
 
                     </div>
@@ -268,55 +299,67 @@
                 <div class="about">
                     <h2 class="title2">WORK SAMPLES</h2>
                     <div>
-                        {% for object in worksamples %}                        
-                     <div  id="worksamplediv-{{object.id}}">
-                        <div class="row">
-                        <div class="col-md-4">
-                            <div class="year_company">
-                                <input type="text" class="data project_name" name="project_name" value="{{object.project_name}}" placeholder="Project name...">
-                            </div>
-                        </div>
-
-                        <div class="col-md-8">
-                            <div class="text">
-                                <!-- <h4>Senior UX Developer</h4> -->
-                                <textarea placeholder="Project link..." rows="4" cols="50" class="data project_link" id="project_link" name="project_link" required="">{{ object.project_link }}</textarea>
-                                <textarea placeholder="Technology..." rows="4" cols="50" id="technology" name="technology" class="data technology" required="">{{ object.technology }}</textarea>
-                                <textarea placeholder="Description here..." rows="4" cols="50" class="data description" id="description" name="description" required="">{{ object.description }}</textarea>
-                                <textarea placeholder="Role and Responsibilities here..." rows="4" cols="50" class=" data responsibilities" id="responsibilities" name="responsibilities" required="">{{ object.responsibilities }}</textarea>
-                                <div class="btnset">
-                                <button type="button" class="Delete" data-id="{{object.id}}"
-                                    onclick="deleteWorkSample('{{object.id}}')"><i class="fa fa-trash"
-                                        aria-hidden="true"></i> Delete</button>
-
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                        {% endfor %}
-
-                        <div class="tab">
-                            <div class="form-group " id="resume-worksamples" style="display: none;">
+                        {% for object in worksamples %}
+                        <div id="worksamplediv-{{object.id}}">
+                            <div class="row">
                                 <div class="col-md-4">
                                     <div class="year_company">
-                                        <input type="text" class="data project_name" name="project_name" placeholder="Project name...">
+                                        <input type="text" class="data project_name" name="project_name"
+                                            value="{{object.project_name}}" placeholder="Project name...">
                                     </div>
                                 </div>
 
                                 <div class="col-md-8">
                                     <div class="text">
                                         <!-- <h4>Senior UX Developer</h4> -->
-                                        <textarea placeholder="Project link..." rows="4" cols="50" class="data project_link" name="project_link" required=""></textarea>
-                                        <textarea placeholder="Technology..." rows="4" cols="50" name="technology" class="data technology" required=""></textarea>
-                                        <textarea placeholder="Description here..." rows="4" cols="50" class="data description" name="description" required=""></textarea>
-                                        <textarea placeholder="Role and Responsibilities here..." rows="4" cols="50" class=" data responsibilities" name="responsibilities" required=""></textarea>
+                                        <textarea placeholder="Project link..." rows="4" cols="50"
+                                            class="data project_link" id="project_link" name="project_link"
+                                            required="">{{ object.project_link }}</textarea>
+                                        <textarea placeholder="Technology..." rows="4" cols="50" id="technology"
+                                            name="technology" class="data technology"
+                                            required="">{{ object.technology }}</textarea>
+                                        <textarea placeholder="Description here..." rows="4" cols="50"
+                                            class="data description" id="description" name="description"
+                                            required="">{{ object.description }}</textarea>
+                                        <textarea placeholder="Role and Responsibilities here..." rows="4" cols="50"
+                                            class=" data responsibilities" id="responsibilities" name="responsibilities"
+                                            required="">{{ object.responsibilities }}</textarea>
+                                        <div class="btnset">
+                                            <button type="button" class="Delete" data-id="{{object.id}}"
+                                                onclick="deleteWorkSample('{{object.id}}')"><i class="fa fa-trash"
+                                                    aria-hidden="true"></i> Delete</button>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+
+                        <div class="tab">
+                            <div class="form-group " id="resume-worksamples" style="display: none;">
+                                <div class="col-md-4">
+                                    <div class="year_company">
+                                        <input type="text" class="data project_name" name="project_name"
+                                            placeholder="Project name...">
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="text">
+                                        <!-- <h4>Senior UX Developer</h4> -->
+                                        <textarea placeholder="Project link..." rows="4" cols="50"
+                                            class="data project_link" name="project_link" required=""></textarea>
+                                        <textarea placeholder="Technology..." rows="4" cols="50" name="technology"
+                                            class="data technology" required=""></textarea>
+                                        <textarea placeholder="Description here..." rows="4" cols="50"
+                                            class="data description" name="description" required=""></textarea>
+                                        <textarea placeholder="Role and Responsibilities here..." rows="4" cols="50"
+                                            class=" data responsibilities" name="responsibilities"
+                                            required=""></textarea>
 
                                     </div>
                                 </div>
                             </div>
-
-
                             <!-- <button type="button"  data-name="certificate" id="add-certificate"><i class="fa fa-plus secondary" aria-hidden="true" ></i>&nbsp; Add Certificate !</button> -->
                         </div>
 
@@ -324,87 +367,91 @@
                     <div class="form-group another-worksamples" id="another-worksamples"></div>
                     <div class="btnset">
                         <button class="add" type="button" data-name="worksamples" id="add-worksamples"><i
-                        class="fa fa-plus-square" aria-hidden="true"></i> Add Worksamples !</button>
+                                class="fa fa-plus-square" aria-hidden="true"></i> Add Worksamples !</button>
                     </div>
                 </div>
-
-
-
-
                 <div class="about">
                     <h2 class="title2">ACHIEVEMENTS</h2>
                     {% for object in achievements %}
                     <div id="achievement-{{object.id}}">
 
-                    <textarea placeholder="Achievements here..." rows="4" cols="50" class="data achievements" id="achievements" name="achievements" required="">{{ object.achievements }}</textarea>
-                    <div class="btnset">
-                        <button type="button" class="Delete" data-id="{{object.id}}"
-                            onclick="deleteAchievement('{{object.id}}')"><i class="fa fa-trash" aria-hidden="true"></i>
-                            Delete</button>
-                    </div>
+                        <textarea placeholder="Achievements here..." rows="4" cols="50" class="data achievements"
+                            id="achievements" name="achievements" required="">{{ object.achievements }}</textarea>
+                        <div class="btnset">
+                            <button type="button" class="Delete" data-id="{{object.id}}"
+                                onclick="deleteAchievement('{{object.id}}')"><i class="fa fa-trash"
+                                    aria-hidden="true"></i>
+                                Delete</button>
+                        </div>
                     </div>
                     {% endfor %}
 
                     <div class="tab">
                         <div class="form-group " id="resume-achievements" style="display: none;">
-                            <textarea placeholder="Achievements here..." rows="4" cols="50" class="data achievements" id="achievements" name="achievements" required=""></textarea>
+                            <textarea placeholder="Achievements here..." rows="4" cols="50" class="data achievements"
+                                id="achievements" name="achievements" required=""></textarea>
                         </div>
 
                         <div class="form-group another-achievements" id="another-achievements"></div>
                         <div class="btnset">
                             <button class="add" type="button" data-name="achievements" id="add-achievements"><i
-                                class="fa fa-plus-square" aria-hidden="true"></i> Add Achievements !</button>
+                                    class="fa fa-plus-square" aria-hidden="true"></i> Add Achievements !</button>
                         </div>
-                        
+
                     </div>
                 </div>
 
-
                 <div class="about">
                     <h2 class="title2">CERTIFICATE</h2>
-
                     {% for object in certificates %}
                     <div id="certificate-{{object.id}}">
 
-                    <textarea placeholder="certificate here..." rows="4" cols="50" class="data certificate" id="certificate" name="certificate" required="">{{ object.certificate }}</textarea>
-                    <div class="btnset">
-                        <button type="button" class="Delete" data-id="{{object.id}}"
-                            onclick="deleteCertificate('{{object.id}}')"><i class="fa fa-trash" aria-hidden="true"></i>
-                            Delete</button>
-                    </div>
+                        <textarea placeholder="certificate here..." rows="4" cols="50" class="data certificate"
+                            id="certificate" name="certificate" required="">{{ object.certificate }}</textarea>
+                        <div class="btnset">
+                            <button type="button" class="Delete" data-id="{{object.id}}"
+                                onclick="deleteCertificate('{{object.id}}')"><i class="fa fa-trash"
+                                    aria-hidden="true"></i>
+                                Delete</button>
+                        </div>
                     </div>
                     {% endfor %}
 
                     <div class="tab">
                         <div class="form-group " id="resume-certificate" style="display: none;">
-                            <textarea placeholder="Certicate here..." rows="4" cols="50" class="data certificate" id="certificate" name="certificate" required="">{{object.certificate}}</textarea>
+                            <textarea placeholder="Certicate here..." rows="4" cols="50" class="data certificate"
+                                id="certificate" name="certificate" required="">{{object.certificate}}</textarea>
                         </div>
-
                         <div class="form-group another-certificate" id="another-certificate"></div>
                         <div class="btnset">
                             <button class="add" type="button" data-name="certificate" id="add-certificate"><i
-                                class="fa fa-plus-square" aria-hidden="true"></i> Add Certificate !</button>
+                                    class="fa fa-plus-square" aria-hidden="true"></i> Add Certificate !</button>
                         </div>
-                       
                     </div>
                 </div>
-                </div>
             </div>
-            </td>
-            </tr>
-            <div class="text-right preview-btn">
-                <a href="{% url 'template_preview5' resume.id %}" class="btn btn-info preview"> Preview </a>
-            </div>
-        </table>
+    </div>
+    </td>
+    </tr>
+    <div class="text-right preview-btn">
+        <a href="{% url 'template_preview5' resume.id %}" class="btn btn-info preview"> Preview </a>
+    </div>
+    </table>
 
     </div>
     <!-- partial -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha512-bnIvzh6FU75ZKxp0GXLH9bewza/OIw6dLVh9ICg0gogclmYGguQJWl8U30WpbsGTqbIiAwxTsbe76DErLq5EDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+        integrity="sha512-bnIvzh6FU75ZKxp0GXLH9bewza/OIw6dLVh9ICg0gogclmYGguQJWl8U30WpbsGTqbIiAwxTsbe76DErLq5EDQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
 
@@ -441,8 +488,6 @@
 
                                 <input type="text" class="data university" id="university" name="university"
                                     placeholder="University name...">
-
-
                                 <input type="text" class="data year_of_passing" id="year_of_passing" name="year_of_passing"
                                     placeholder="Year of passing...">
 
@@ -497,10 +542,8 @@
                                 <input type="text" class="data place" name="place" placeholder="Place" value="{{object.place}}">
                             </div>
                         </div>
-
                         <div class="col-md-8">
-                            <div class="text">
-                                <!-- <h4>Senior UX Developer</h4> -->
+                            <div class="text">                             
                                 <textarea placeholder="Designation..." rows="4" cols="50" name="designation" id="designation" class="data designation" required="">{{ object.designation }}</textarea>
                                 <textarea placeholder="Role here..." rows="4" cols="50" class="data role" name="role" id="role" required="">{{ object.role }}</textarea>
                                 <div class="btnset">
@@ -514,7 +557,7 @@
                             </div>
                         </div>
                         </div>
-                    `;                    
+                    `;
                     $("#another-experience").append(html);
                 }
             })
@@ -522,7 +565,6 @@
         })
 
         function deleteExperience(id) {
-            // var id = $(this).data("id")           
             var token = '{{csrf_token}}';
             $.ajax({
                 type: 'GET',
@@ -557,10 +599,8 @@
                                 <input type="text" class="data project_name" name="project_name" value="{{object.project_name}}" placeholder="Project name...">
                             </div>
                         </div>
-
                         <div class="col-md-8">
-                            <div class="text">
-                                <!-- <h4>Senior UX Developer</h4> -->
+                            <div class="text">                              
                                 <textarea placeholder="Project link..." rows="4" cols="50" class="data project_link" id="project_link" name="project_link" required="">{{ object.project_link }}</textarea>
                                 <textarea placeholder="Technology..." rows="4" cols="50" id="technology" name="technology" class="data technology" required="">{{ object.technology }}</textarea>
                                 <textarea placeholder="Description here..." rows="4" cols="50" class="data description" id="description" name="description" required="">{{ object.description }}</textarea>
@@ -569,13 +609,12 @@
                                 <button type="button" class="Delete" data-id="{{object.id}}"
                                     onclick='deleteWorkSample(\"${json}\")'><i class="fa fa-trash"
                                         aria-hidden="true"></i> Delete</button>
-
                             </div>
                             </div>
                         </div>
                     </div>
                     </div>
-                    `;                    
+                    `;
                     $("#another-worksamples").append(html);
                 }
             })
@@ -610,13 +649,12 @@
                 success: function (json) {
                     var html = `
                     <div id='achievement-${json}'>
-
-                    <textarea placeholder="Achievements here..." rows="4" cols="50" class="data achievements" id="achievements" name="achievements" required="">{{ object.achievements }}</textarea>
-                    <div class="btnset">
-                        <button type="button" class="Delete" data-id="{{object.id}}"
-                           onclick='deleteAchievement(\"${json}\")'><i class="fa fa-trash" aria-hidden="true"></i>
-                            Delete</button>
-                    </div>
+                     <textarea placeholder="Achievements here..." rows="4" cols="50" class="data achievements" id="achievements" name="achievements" required="">{{ object.achievements }}</textarea>
+                        <div class="btnset">
+                            <button type="button" class="Delete" data-id="{{object.id}}"
+                            onclick='deleteAchievement(\"${json}\")'><i class="fa fa-trash" aria-hidden="true"></i>
+                                Delete</button>
+                        </div>
                     </div>
                     `;
                     $("#another-achievements").append(html);

@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap");
 
 html {
-  background: #E0F2F1;
+  background: #e0f2f1;
 }
 
 body,
@@ -25,11 +25,10 @@ p {
   margin: 0px;
 }
 a {
-
 }
 
 .button {
-  background: #1DE9B6;
+  background: #1de9b6;
   padding: 8px 16px;
   color: white;
   font-weight: bold;
@@ -40,13 +39,13 @@ a {
   cursor: pointer;
   outline: none;
   transition: 0.2s all;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.00), 0 1px 2px rgba(0, 0, 0, 0.00);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0), 0 1px 2px rgba(0, 0, 0, 0);
 }
 
 a:hover {
   margin-top: -1px;
   margin-bottom: 1px;
-  background: #64FFDA;
+  background: #64ffda;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02), 0 1px 2px rgba(0, 0, 0, 0.14);
 }
 
@@ -54,13 +53,12 @@ a:active {
   background: #00bfa5;
   margin-top: 0px;
   margin-bottom: 0px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.00), 0 1px 2px rgba(0, 0, 0, 0.00);
-
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0), 0 1px 2px rgba(0, 0, 0, 0);
 }
 
 form {
   padding-bottom: 16px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background: white;
   border-radius: 8px;
   width: 100%;
@@ -78,7 +76,7 @@ form {
 
 .form__header h1 {
   font-size: 1.5rem;
-  margin-bottom: 8px
+  margin-bottom: 8px;
 }
 
 .form__header p {
@@ -100,7 +98,7 @@ form h3 {
   margin-top: 24px;
   padding: 0px 32px;
   width: 100%;
-  font-size: 1.10rem;
+  font-size: 1.1rem;
   text-align: left;
 }
 
@@ -113,7 +111,7 @@ form h3 {
 }
 
 .form-group:hover {
-  border-left: 3px solid #64FFDA;
+  border-left: 3px solid #64ffda;
 }
 
 .form-date-group {
@@ -126,7 +124,7 @@ form h3 {
 }
 
 .form-date-group:hover {
-  border-left: 3px solid #64FFDA;
+  border-left: 3px solid #64ffda;
 }
 
 .form-date-group .form-group {
@@ -156,19 +154,19 @@ form .line-break {
   border-bottom: 1px solid #eee;
 }
 
-input[type=text]::placeholder,
-input[type=password]::placeholder,
-input[type=email]::placeholder,
-input[type=date]::placeholder,
+input[type="text"]::placeholder,
+input[type="password"]::placeholder,
+input[type="email"]::placeholder,
+input[type="date"]::placeholder,
 textarea::placeholder {
   font-weight: 400;
   color: rgba(0, 0, 0, 0.4);
 }
 
-input[type=text],
-input[type=password],
-input[type=email],
-input[type=date],
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="date"],
 textarea {
   font-size: 1.05rem;
   font-weight: 600;
@@ -186,17 +184,17 @@ textarea {
   max-width: 533px;
 }
 
-input[type=text]:focus,
-input[type=date]:focus,
-input[type=email]:focus,
-input[type=password]:focus,
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
 textarea:focus {
   outline: none;
-  border-color: #1DE9B6;
+  border-color: #1de9b6;
 }
 
-input[type=submit] {
-  background: #1DE9B6;
+input[type="submit"] {
+  background: #1de9b6;
   padding: 8px 16px;
   color: white;
   font-weight: bold;
@@ -207,22 +205,21 @@ input[type=submit] {
   cursor: pointer;
   outline: none;
   transition: 0.2s all;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.00), 0 1px 2px rgba(0, 0, 0, 0.00);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0), 0 1px 2px rgba(0, 0, 0, 0);
 }
 
-input[type=submit]:hover {
+input[type="submit"]:hover {
   margin-top: -1px;
   margin-bottom: 1px;
-  background: #64FFDA;
+  background: #64ffda;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02), 0 1px 2px rgba(0, 0, 0, 0.14);
 }
 
-input[type=submit]:active {
+input[type="submit"]:active {
   background: #00bfa5;
   margin-top: 0px;
   margin-bottom: 0px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.00), 0 1px 2px rgba(0, 0, 0, 0.00);
-
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0), 0 1px 2px rgba(0, 0, 0, 0);
 }
 
 .error__input {

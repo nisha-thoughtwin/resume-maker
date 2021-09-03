@@ -6,8 +6,9 @@
   .todo nav ul li {
     padding: 11px 20px;
   }
+
 </style>
-<link rel="stylesheet" href="/static/toast/style.css" /> {% endblock css %} 
+<link rel="stylesheet" href="/static/toast/style.css" /> {% endblock css %}
 {% block main %}
 
 <div class="todo">
@@ -27,11 +28,9 @@
           <h2 class="tem">Team Leader: {{user.parent}}</h2>
         </div>
         <div class="col-md-6">
-          <a href="/"
-            ><button type="button" style="float: right; margin: 9px 0">
+          <a href="/"><button type="button" style="float: right; margin: 9px 0">
               Create Another Resume
-            </button></a
-          >
+            </button></a>
         </div>
       </div>
 
@@ -41,12 +40,12 @@
       <table cellpadding="0" cellspacing="0">
         <tr class="negrita bg-dark">
           <th>Resume Name</th>
-          
+
           {% if request.user.is_superuser %}
           <th>Created By</th>
-            
+
           {% endif %}
-            
+
           <th>&nbsp;</th>
           <th>&nbsp;</th>
           <th>Action</th>
@@ -54,74 +53,48 @@
         </tr>
         {% for resume in resumes %}
         <tr>
-          <th><h4>{{ resume.title }}</h4></th>
+          <th>
+            <h4>{{ resume.title }}</h4>
+          </th>
           {% if request.user.is_superuser %}
-          
-          {% if  resume.user.username is None %}
+
+          {% if resume.user.username is None %}
           <th>Anonymous</th>
 
           {% else %}
 
           <th>{{ resume.user.username}}</th>
           {% endif %}
-            
+
           {% endif %}
           <th>&nbsp;</th>
           <th>&nbsp;</th>
           <th>
-            <a
-              href="{% url 'update_data' resume.id %}"
-              class="btn btn-warning btn-sm"
-              >edit and add more</a
-            >
+            <a href="{% url 'update_data' resume.id %}" class="btn btn-warning btn-sm">edit and add more</a>
           </th>
           {% if resume.template.name == "template" %}
           <th>
-            <a
-              href="{% url 'template_preview' resume.id %}"
-              class="btn btn-success btn-sm"
-              >View</a
-            >
+            <a href="{% url 'template_preview' resume.id %}" class="btn btn-success btn-sm">View</a>
           </th>
           {% elif resume.template.name == "template2" %}
           <th>
-            <a
-              href="{% url 'template_preview2' resume.id %}"
-              class="btn btn-success btn-sm"
-              >View</a
-            >
+            <a href="{% url 'template_preview2' resume.id %}" class="btn btn-success btn-sm">View</a>
           </th>
           {% elif resume.template.name == "template3" %}
           <th>
-            <a
-              href="{% url 'template_preview3' resume.id%}"
-              class="btn btn-success btn-sm"
-              >View</a
-            >
+            <a href="{% url 'template_preview3' resume.id%}" class="btn btn-success btn-sm">View</a>
           </th>
           {% elif resume.template.name == "template4" %}
           <th>
-            <a
-              href="{% url 'template_preview4' resume.id %}"
-              class="btn btn-success btn-sm"
-              >View</a
-            >
+            <a href="{% url 'template_preview4' resume.id %}" class="btn btn-success btn-sm">View</a>
           </th>
           {% elif resume.template.name == "template5" %}
           <th>
-            <a
-              href="{% url 'template_preview5' resume.id %}"
-              class="btn btn-success btn-sm"
-              >View</a
-            >
+            <a href="{% url 'template_preview5' resume.id %}" class="btn btn-success btn-sm">View</a>
           </th>
           {% elif resume.template.name == "template6" %}
           <th>
-            <a
-              href="{% url 'template_preview6' resume.id %}"
-              class="btn btn-success btn-sm"
-              >View</a
-            >
+            <a href="{% url 'template_preview6' resume.id %}" class="btn btn-success btn-sm">View</a>
           </th>
           {% else %}
           <th></th>
