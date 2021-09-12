@@ -7,7 +7,7 @@ from django.db import IntegrityError
 from django.http import HttpResponse
 from django.shortcuts import redirect, render
 from django.views import View
-
+from .notification import send_notification
 from apps.resume.models import *
 
 from .models import User
@@ -75,7 +75,8 @@ def sign_up(request, id=None):
             if user is not None:
                 form = login(request, user)
                 messages.success(request, f" welcome {username} !!")
-                return redirect("dashboard")
+                return render(request, "resume/dashboard.html",{"messages":messages})
+
 
         except IntegrityError as e:
             return render(
@@ -111,7 +112,8 @@ def sign_in(request, id=None):
         if user is not None:
             form = login(request, user)
             # messages.success(request, f" welcome {username} !!")
-            return redirect("dashboard")
+            return render(request, "resume/dashboard.html",{"messages":messages})
+
         else:
             messages.info(request, f"Your account does not exist ")
     form = AuthenticationForm()
@@ -145,3 +147,19 @@ class UpdatePassword(View):
             messages.info(request, "Current Password is incorrect")
             print("current")
             return redirect(f'/users/update_password/')    
+        
+        
+        
+class notifications(View):
+    def get(self, request, *args, **kwargs):
+        #defining data message (Extra details)
+        data = {
+                "name": "HORN OK PLEASE!",
+                "days": 3,
+                "country": "United States"
+            }
+        result=send_notification(user_ids=["1","2","3"],
+                  title="It's now or never: Horn Ok is back!",
+                  message="Book now to get 50% off!",
+                  data=data)
+        return HttpResponse(result)

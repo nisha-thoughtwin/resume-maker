@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 import os
 from pathlib import Path
+from firebase_admin import initialize_app
+
 # import django_heroku
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -42,10 +44,27 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'apps.resume.apps.ResumeConfig',
     'apps.users',
+    "fcm_django",
     
     
 
 ]
+
+FIREBASE_APP = initialize_app()
+
+FCM_DJANGO_SETTINGS = {
+    "APP_VERBOSE_NAME": "firebasetest_django",
+    # default: _('FCM Django')
+    "FCM_SERVER_KEY": "AAAA8LvEvxE:APA91bFDDdRam3B-sUHXARGA_J8nxDLJbETONZlWCx4M_UMI9PJMNF7hlkrE8LLS0L1FJ9MeWlC1UVesk9AVXz-mko2mRfXHexKSk8jSRSiw5dWLJZS3M0VfPyvEWu-FgKvb5eQFv7G_",
+    # true if you want to have only one active device per registered user at a time
+    # default: False
+    "ONE_DEVICE_PER_USER": False,
+    # devices to which notifications cannot be sent,
+    # are deleted upon receiving error response from FCM
+    # default: False
+    "DELETE_INACTIVE_DEVICES": True,
+}
+
 DATE_INPUT_FORMATS = ['%d/%m/%Y', ]
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
